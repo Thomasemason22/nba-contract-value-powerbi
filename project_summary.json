@@ -1,0 +1,83 @@
+{
+  "season": "2025-26",
+  "pulled_at": "2026-06-11 13:54:21",
+  "sources": {
+    "totals": "https://www.basketball-reference.com/leagues/NBA_2026_totals.html",
+    "per_game": "https://www.basketball-reference.com/leagues/NBA_2026_per_game.html",
+    "advanced": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
+    "salaries": "https://www.basketball-reference.com/contracts/players.html"
+  },
+  "salary_rows": 529,
+  "matched_rows": 510,
+  "unmatched_rows": 19,
+  "qualified_players": 370,
+  "top_value_players": [
+    {
+      "PlayerName": "Kobe Sanders",
+      "SalaryTeam": "LAC",
+      "ValueScore": 1972.8831096726162,
+      "ValueGap": 9.0
+    },
+    {
+      "PlayerName": "Jordan Miller",
+      "SalaryTeam": "LAC",
+      "ValueScore": 1579.2051212608947,
+      "ValueGap": 48.0
+    },
+    {
+      "PlayerName": "Maxime Raynaud",
+      "SalaryTeam": "SAC",
+      "ValueScore": 1473.9918452002169,
+      "ValueGap": 175.0
+    },
+    {
+      "PlayerName": "Spencer Jones",
+      "SalaryTeam": "DEN",
+      "ValueScore": 1428.4409271644172,
+      "ValueGap": -2.0
+    },
+    {
+      "PlayerName": "Sidy Cissoko",
+      "SalaryTeam": "POR",
+      "ValueScore": 1323.4379075633558,
+      "ValueGap": 3.0
+    },
+    {
+      "PlayerName": "Pat Spencer",
+      "SalaryTeam": "GSW",
+      "ValueScore": 1267.8887018479745,
+      "ValueGap": 34.0
+    },
+    {
+      "PlayerName": "Nae'Qwan Tomlin",
+      "SalaryTeam": "CLE",
+      "ValueScore": 1215.2057369630302,
+      "ValueGap": -8.0
+    },
+    {
+      "PlayerName": "Toumani Camara",
+      "SalaryTeam": "POR",
+      "ValueScore": 967.6024012491464,
+      "ValueGap": 190.0
+    },
+    {
+      "PlayerName": "Collin Gillespie",
+      "SalaryTeam": "PHO",
+      "ValueScore": 949.7559960178969,
+      "ValueGap": 192.0
+    },
+    {
+      "PlayerName": "Olivier-Maxence Prosper",
+      "SalaryTeam": "DAL",
+      "ValueScore": 940.6799952113014,
+      "ValueGap": 3.0
+    }
+  ],
+  "top_team_value": [
+    {
+      "TeamName": "Dallas Mavericks",
+      "TeamKey": "DAL",
+      "ValueScore": 128.64828798452706
+    }
+  ]
+}

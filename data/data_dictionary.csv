@@ -1,0 +1,22 @@
+TableName,ColumnName,DataType,Description
+Fact_Player_Value,PlayerKey,Text,Unique player row key for this project dataset.
+Fact_Player_Value,Season,Text,NBA season used for salary and performance analysis.
+Fact_Player_Value,PlayerName,Text,Player display name.
+Fact_Player_Value,SalaryTeam,Text,Team abbreviation from the salary/contracts table.
+Fact_Player_Value,StatsTeam,Text,Team abbreviation from the stats table. Multi-team players use the Basketball Reference combined row.
+Fact_Player_Value,Salary,Currency,Listed player salary for the selected season.
+Fact_Player_Value,TotalPoints,Number,Total points scored in the selected season.
+Fact_Player_Value,TotalRebounds,Number,Total rebounds in the selected season.
+Fact_Player_Value,TotalAssists,Number,Total assists in the selected season.
+Fact_Player_Value,WS,Number,Basketball Reference win shares.
+Fact_Player_Value,VORP,Number,Basketball Reference value over replacement player.
+Fact_Player_Value,ProductionScore,Number,Custom box-score production score: PTS + 1.2*REB + 1.5*AST + 3*STL + 3*BLK - TOV.
+Fact_Player_Value,CostPerPoint,Currency,Salary divided by total points. Lower is better.
+Fact_Player_Value,CostPerWinShare,Currency,Salary divided by win shares. Lower is better.
+Fact_Player_Value,ValueScore,Number,ProductionScore divided by salary in millions. Higher is better.
+Fact_Player_Value,ValueGap,Number,Salary rank minus production rank. Positive means production outranks salary.
+Team_Efficiency,Payroll,Currency,Sum of player salaries by salary team.
+Team_Efficiency,CostPerWinShare,Currency,Team payroll divided by player win shares.
+Team_Efficiency,ValueScore,Number,Team production score divided by payroll in millions.
+Dim_Team,TeamKey,Text,NBA team abbreviation.
+Dim_Position,SortOrder,Number,Suggested sort order for positions in visuals.

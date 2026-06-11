@@ -1,0 +1,6 @@
+Position,PositionGroup,SortOrder
+PG,Guard,1
+SG,Guard,2
+SF,Wing,3
+PF,Forward,4
+C,Center,5
