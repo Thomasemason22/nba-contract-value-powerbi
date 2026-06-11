@@ -11,29 +11,44 @@ This starter project is built for Power BI. It includes cleaned CSV tables, an E
 - Player totals: https://www.basketball-reference.com/leagues/NBA_2026_totals.html
 - Player per-game stats: https://www.basketball-reference.com/leagues/NBA_2026_per_game.html
 - Player advanced stats: https://www.basketball-reference.com/leagues/NBA_2026_advanced.html
+- Player per-100-possession stats: https://www.basketball-reference.com/leagues/NBA_2026_per_poss.html
+- Player shooting profile: https://www.basketball-reference.com/leagues/NBA_2026_shooting.html
+- Team summary and four factors: https://www.basketball-reference.com/leagues/NBA_2026.html
+- Team adjusted ratings: https://www.basketball-reference.com/leagues/NBA_2026_ratings.html
 - Player salaries/contracts: https://www.basketball-reference.com/contracts/players.html
 
-Data was pulled locally on **2026-06-11 13:54:21**. Basketball Reference tables can update, so refresh the generated CSVs before submitting a final project if current numbers matter.
+Data was pulled locally on **2026-06-11 14:20:20**. Basketball Reference tables can update, so refresh the generated CSVs before submitting a final project if current numbers matter.
 
 ## Files
 
 - `data/fact_player_value.csv`: primary fact table for player salary and performance.
+- `data/player_pace_adjusted.csv`: per-100-possession player stats and player offensive/defensive rating.
+- `data/player_shooting_profile.csv`: shot-distance, shot-location mix, assisted-shot, dunk, and corner-three metrics.
 - `data/team_efficiency.csv`: team-level payroll efficiency summary.
+- `data/team_context.csv`: team wins, ratings, pace, four factors, attendance, and shot-profile context.
 - `data/dim_player.csv`: player attributes.
 - `data/dim_team.csv`: NBA team lookup table.
 - `data/dim_position.csv`: position lookup table.
 - `data/data_dictionary.csv`: column definitions.
 - `data/measure_catalog.csv`: suggested Power BI measures.
+- `theme/nba-contract-value-theme.json`: importable Power BI theme.
+- `assets/report_layout_mockup.svg`: visual reference for the report layout.
 - `NBA_Contract_Value_Analysis.xlsx`: Excel workbook containing the same project tables.
 - `docs/dax_measures.md`: DAX formulas to paste into Power BI.
 - `docs/powerbi_build_guide.md`: step-by-step build instructions.
 - `docs/report_wireframe.md`: suggested report pages and visuals.
+- `docs/ui_style_guide.md`: visual design system, layout rhythm, and styling notes.
+- `scripts/build_nba_powerbi_project.py`: rebuilds CSVs, docs, theme, and summary metadata.
+- `scripts/build_workbook.mjs`: rebuilds the Excel workbook from the generated CSVs.
 
 ## Current Dataset Snapshot
 
 - Salary rows: **529**
 - Matched salary + stat rows: **510**
 - Qualified value-rank players: **370**
+- Pace-adjusted player rows: **510**
+- Player shooting-profile rows: **510**
+- Team context rows: **30**
 - Top team by team value score: **Dallas Mavericks**
 
 ## Early Insight Starters

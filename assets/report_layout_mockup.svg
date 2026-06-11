@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#07111F"/>
+  <rect x="24" y="24" width="1232" height="72" rx="8" fill="#0B1623"/>
+  <text x="48" y="68" fill="#F8FAFC" font-family="Segoe UI, Arial" font-size="30" font-weight="700">NBA Contract Value Analysis</text>
+  <text x="1030" y="66" fill="#A8B3C5" font-family="Segoe UI, Arial" font-size="16">2025-26 Season</text>
+  <rect x="24" y="116" width="214" height="580" rx="8" fill="#102033"/>
+  <text x="48" y="154" fill="#FBBF24" font-family="Segoe UI, Arial" font-size="14" font-weight="700">FILTERS</text>
+  <rect x="48" y="180" width="166" height="36" rx="5" fill="#172A42"/>
+  <rect x="48" y="232" width="166" height="36" rx="5" fill="#172A42"/>
+  <rect x="48" y="284" width="166" height="36" rx="5" fill="#172A42"/>
+  <text x="64" y="204" fill="#E5E7EB" font-family="Segoe UI, Arial" font-size="13">Conference</text>
+  <text x="64" y="256" fill="#E5E7EB" font-family="Segoe UI, Arial" font-size="13">Team</text>
+  <text x="64" y="308" fill="#E5E7EB" font-family="Segoe UI, Arial" font-size="13">Position Group</text>
+  <g>
+    <rect x="262" y="116" width="226" height="104" rx="8" fill="#102033" stroke="#1E3A5F"/>
+    <rect x="506" y="116" width="226" height="104" rx="8" fill="#102033" stroke="#1E3A5F"/>
+    <rect x="750" y="116" width="226" height="104" rx="8" fill="#102033" stroke="#1E3A5F"/>
+    <rect x="994" y="116" width="262" height="104" rx="8" fill="#102033" stroke="#1E3A5F"/>
+    <text x="286" y="150" fill="#A8B3C5" font-family="Segoe UI, Arial" font-size="13">TOTAL SALARY</text>
+    <text x="530" y="150" fill="#A8B3C5" font-family="Segoe UI, Arial" font-size="13">WIN SHARES</text>
+    <text x="774" y="150" fill="#A8B3C5" font-family="Segoe UI, Arial" font-size="13">VALUE SCORE</text>
+    <text x="1018" y="150" fill="#A8B3C5" font-family="Segoe UI, Arial" font-size="13">PAYROLL PER WIN</text>
+    <text x="286" y="188" fill="#F8FAFC" font-family="Segoe UI, Arial" font-size="34" font-weight="700">$5.1B</text>
+    <text x="530" y="188" fill="#F8FAFC" font-family="Segoe UI, Arial" font-size="34" font-weight="700">2,490</text>
+    <text x="774" y="188" fill="#38BDF8" font-family="Segoe UI, Arial" font-size="34" font-weight="700">128.6</text>
+    <text x="1018" y="188" fill="#FBBF24" font-family="Segoe UI, Arial" font-size="34" font-weight="700">$2.4M</text>
+  </g>
+  <rect x="262" y="244" width="578" height="298" rx="8" fill="#102033" stroke="#1E3A5F"/>
+  <text x="286" y="278" fill="#F8FAFC" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Salary vs Production Score</text>
+  <line x1="300" y1="502" x2="806" y2="502" stroke="#243B55"/>
+  <line x1="300" y1="304" x2="300" y2="502" stroke="#243B55"/>
+  <circle cx="382" cy="452" r="6" fill="#38BDF8"/>
+  <circle cx="510" cy="394" r="8" fill="#38BDF8"/>
+  <circle cx="658" cy="342" r="10" fill="#FBBF24"/>
+  <circle cx="734" cy="430" r="6" fill="#22C55E"/>
+  <circle cx="450" cy="330" r="5" fill="#A78BFA"/>
+  <rect x="864" y="244" width="392" height="298" rx="8" fill="#102033" stroke="#1E3A5F"/>
+  <text x="888" y="278" fill="#F8FAFC" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Top Teams by Value Score</text>
+  <rect x="900" y="468" width="28" height="34" fill="#38BDF8"/>
+  <rect x="952" y="430" width="28" height="72" fill="#38BDF8"/>
+  <rect x="1004" y="382" width="28" height="120" fill="#FBBF24"/>
+  <rect x="1056" y="408" width="28" height="94" fill="#38BDF8"/>
+  <rect x="1108" y="352" width="28" height="150" fill="#22C55E"/>
+  <rect x="1160" y="396" width="28" height="106" fill="#38BDF8"/>
+  <rect x="262" y="566" width="994" height="130" rx="8" fill="#102033" stroke="#1E3A5F"/>
+  <text x="286" y="600" fill="#F8FAFC" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Player Value Ranking Table</text>
+  <line x1="286" y1="622" x2="1230" y2="622" stroke="#243B55"/>
+  <line x1="286" y1="654" x2="1230" y2="654" stroke="#243B55"/>
+  <line x1="286" y1="682" x2="1230" y2="682" stroke="#243B55"/>
+</svg>

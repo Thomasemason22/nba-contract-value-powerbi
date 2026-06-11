@@ -1,10 +1,17 @@
 Item,Value
 Season,2025-26
-PulledAtLocalTime,2026-06-11 13:54:21
+PulledAtLocalTime,2026-06-11 14:20:20
 Stats source,https://www.basketball-reference.com/leagues/NBA_2026_totals.html
 Per-game source,https://www.basketball-reference.com/leagues/NBA_2026_per_game.html
 Advanced source,https://www.basketball-reference.com/leagues/NBA_2026_advanced.html
+Per-100 source,https://www.basketball-reference.com/leagues/NBA_2026_per_poss.html
+Player shooting source,https://www.basketball-reference.com/leagues/NBA_2026_shooting.html
+Team summary source,https://www.basketball-reference.com/leagues/NBA_2026.html
+Team ratings source,https://www.basketball-reference.com/leagues/NBA_2026_ratings.html
 Salary source,https://www.basketball-reference.com/contracts/players.html
 Matched salary rows,510
 Unmatched salary rows,19
 Value rank qualifier,"At least 20 games, 500 minutes, and positive listed salary."
+Player pace-adjusted rows,510
+Player shooting profile rows,510
+Team context rows,30

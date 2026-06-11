@@ -1,0 +1,229 @@
+{
+  "name": "NBA Contract Value Dark Court",
+  "dataColors": [
+    "#38BDF8",
+    "#FBBF24",
+    "#22C55E",
+    "#F43F5E",
+    "#A78BFA",
+    "#FB7185",
+    "#2DD4BF",
+    "#F97316"
+  ],
+  "background": "#07111F",
+  "foreground": "#F8FAFC",
+  "tableAccent": "#38BDF8",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "show": true,
+            "fontColor": {
+              "solid": {
+                "color": "#F8FAFC"
+              }
+            },
+            "fontSize": 12,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#102033"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#1E3A5F"
+              }
+            },
+            "radius": 6
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": false
+          }
+        ],
+        "legend": [
+          {
+            "labelColor": {
+              "solid": {
+                "color": "#A8B3C5"
+              }
+            },
+            "fontSize": 9
+          }
+        ],
+        "categoryAxis": [
+          {
+            "labelColor": {
+              "solid": {
+                "color": "#A8B3C5"
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": "#A8B3C5"
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": "#243B55"
+              }
+            }
+          }
+        ],
+        "valueAxis": [
+          {
+            "labelColor": {
+              "solid": {
+                "color": "#A8B3C5"
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": "#A8B3C5"
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": "#243B55"
+              }
+            }
+          }
+        ],
+        "labels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F8FAFC"
+              }
+            },
+            "fontSize": 9
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F8FAFC"
+              }
+            },
+            "fontSize": 28,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "categoryLabels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#A8B3C5"
+              }
+            },
+            "fontSize": 10
+          }
+        ]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "grid": [
+          {
+            "gridVertical": false,
+            "gridHorizontal": true,
+            "outlineColor": {
+              "solid": {
+                "color": "#243B55"
+              }
+            }
+          }
+        ],
+        "columnHeaders": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#F8FAFC"
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": "#172A42"
+              }
+            },
+            "fontSize": 10
+          }
+        ],
+        "values": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#E5E7EB"
+              }
+            },
+            "backColorPrimary": {
+              "solid": {
+                "color": "#102033"
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": "#0D1A2A"
+              }
+            },
+            "fontSize": 9
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "items": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#E5E7EB"
+              }
+            },
+            "background": {
+              "solid": {
+                "color": "#102033"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 24,
+      "color": "#F8FAFC"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 14,
+      "color": "#F8FAFC"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#A8B3C5"
+    }
+  }
+}

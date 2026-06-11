@@ -31,6 +31,20 @@ Value Score = DIVIDE([Production Score], [Salary Millions])
 
 Player Count = DISTINCTCOUNT(Fact_Player_Value[PlayerKey])
 
+Average Player ORtg = AVERAGE(Player_Pace_Adjusted[PlayerORtg])
+
+Average Player DRtg = AVERAGE(Player_Pace_Adjusted[PlayerDRtg])
+
+Average Shot Distance = AVERAGE(Player_Shooting_Profile[AvgShotDistance])
+
+Average 3P Attempt Share = AVERAGE(Player_Shooting_Profile[FGA_3P_Frequency])
+
+Average Rim Attempt Share = AVERAGE(Player_Shooting_Profile[FGA_0_3_Frequency])
+
+Team Adjusted Net Rating = AVERAGE(Team_Context[AdjustedNetRtg])
+
+Payroll Per Win = DIVIDE([Total Salary], SUM(Team_Efficiency[W]))
+
 Qualified Player Count =
 CALCULATE(
     [Player Count],

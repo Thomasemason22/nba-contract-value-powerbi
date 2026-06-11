@@ -6,3 +6,5 @@ Thumbs.db
 ~$*.xlsx
 ~$*.xls*
 *.bak
+__pycache__/
+workbook_previews/

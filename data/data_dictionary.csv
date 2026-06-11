@@ -18,5 +18,14 @@ Fact_Player_Value,ValueGap,Number,Salary rank minus production rank. Positive me
 Team_Efficiency,Payroll,Currency,Sum of player salaries by salary team.
 Team_Efficiency,CostPerWinShare,Currency,Team payroll divided by player win shares.
 Team_Efficiency,ValueScore,Number,Team production score divided by payroll in millions.
+Team_Context,AdjustedNetRtg,Number,Basketball Reference adjusted net rating by team.
+Team_Context,Pace,Number,Estimated possessions per 48 minutes by team.
+Team_Context,Team3P_Frequency,Number,Share of team field goal attempts from three-point range.
+Player_Pace_Adjusted,PTSPer100,Number,Player points per 100 team possessions.
+Player_Pace_Adjusted,PlayerORtg,Number,Basketball Reference player offensive rating.
+Player_Shooting_Profile,AvgShotDistance,Number,Average field goal attempt distance in feet.
+Player_Shooting_Profile,FGA_3P_Frequency,Number,Share of player field goal attempts from three-point range.
+Player_Shooting_Profile,FGA_0_3_Frequency,Number,Share of player field goal attempts from 0-3 feet.
+Player_Shooting_Profile,Corner3Pct,Number,Player field goal percentage on corner threes.
 Dim_Team,TeamKey,Text,NBA team abbreviation.
 Dim_Position,SortOrder,Number,Suggested sort order for positions in visuals.

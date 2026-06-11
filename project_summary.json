@@ -1,16 +1,23 @@
 {
   "season": "2025-26",
-  "pulled_at": "2026-06-11 13:54:21",
+  "pulled_at": "2026-06-11 14:20:20",
   "sources": {
     "totals": "https://www.basketball-reference.com/leagues/NBA_2026_totals.html",
     "per_game": "https://www.basketball-reference.com/leagues/NBA_2026_per_game.html",
     "advanced": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
+    "per_poss": "https://www.basketball-reference.com/leagues/NBA_2026_per_poss.html",
+    "shooting": "https://www.basketball-reference.com/leagues/NBA_2026_shooting.html",
+    "team_summary": "https://www.basketball-reference.com/leagues/NBA_2026.html",
+    "team_ratings": "https://www.basketball-reference.com/leagues/NBA_2026_ratings.html",
     "salaries": "https://www.basketball-reference.com/contracts/players.html"
   },
   "salary_rows": 529,
   "matched_rows": 510,
   "unmatched_rows": 19,
   "qualified_players": 370,
+  "player_pace_adjusted_rows": 510,
+  "player_shooting_profile_rows": 510,
+  "team_context_rows": 30,
   "top_value_players": [
     {
       "PlayerName": "Kobe Sanders",
