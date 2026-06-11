@@ -1,0 +1,3 @@
+ModelName,target,training_rows,rmse,mae,FeatureSet,LatestPredictionSeason
+Baseline linear next-season forecast,ActualNextSeasonEstimatedWinShares,1776,1.807158556110294,1.4077455829391972,"G, TotalMinutes, PPG, RPG, APG, SPG, BPG, TPG, FG%, 3P%, FT%, eFG%, TS_Pct, ProductionScore, EstimatedWinShares, SalaryMillionsFilled, ValueScoreFilled",2026
+Baseline linear next-season forecast,ActualNextSeasonProductionScore,1776,542.1475668330881,422.3236748817592,"G, TotalMinutes, PPG, RPG, APG, SPG, BPG, TPG, FG%, 3P%, FT%, eFG%, TS_Pct, ProductionScore, EstimatedWinShares, SalaryMillionsFilled, ValueScoreFilled",2026

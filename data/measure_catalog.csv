@@ -1,15 +1,15 @@
 MeasureName,DAX,Format,Description
-Total Salary,SUM(Fact_Player_Value[Salary]),Currency,Total salary in the current filter context.
-Salary Millions,"DIVIDE([Total Salary], 1000000)",Decimal,Total salary shown in millions.
-Total Points,SUM(Fact_Player_Value[TotalPoints]),Whole number,Total points scored.
-Total Win Shares,SUM(Fact_Player_Value[WS]),Decimal,Total win shares.
-Production Score,SUM(Fact_Player_Value[ProductionScore]),Decimal,Weighted box-score production score.
-Cost Per Point,"DIVIDE([Total Salary], [Total Points])",Currency,Salary spent for each point scored. Lower is better.
-Cost Per Win Share,"DIVIDE([Total Salary], [Total Win Shares])",Currency,Salary spent for each win share. Lower is better.
-Value Score,"DIVIDE([Production Score], [Salary Millions])",Decimal,Production generated per $1M of salary. Higher is better.
-Player Count,DISTINCTCOUNT(Fact_Player_Value[PlayerKey]),Whole number,Number of players in the current context.
-Value Rank,"RANKX(ALLSELECTED(Dim_Player[PlayerName]), [Value Score], , DESC)",Whole number,Ranks selected players by value score.
-Avg Player ORtg,AVERAGE(Player_Pace_Adjusted[PlayerORtg]),Decimal,Average Basketball Reference offensive rating for selected players.
-Avg Shot Distance,AVERAGE(Player_Shooting_Profile[AvgShotDistance]),Decimal,Average field goal attempt distance for selected players.
-Team Adjusted Net Rating,AVERAGE(Team_Context[AdjustedNetRtg]),Decimal,Adjusted team net rating in the current filter context.
-Payroll Per Win,"DIVIDE([Total Salary], SUM(Team_Efficiency[W]))",Currency,Team salary spend per regular-season win.
+Total Salary,SUM(Fact_Player_Value[Salary]),Currency,Total salary in context.
+Salary Millions,"DIVIDE([Total Salary], 1000000)",Decimal,Salary in millions.
+Salary Coverage %,"DIVIDE(CALCULATE(COUNTROWS(Fact_Player_Value), Fact_Player_Value[SalaryAvailable] = TRUE()), COUNTROWS(Fact_Player_Value))",Percentage,Share of rows with salary.
+Total Points,SUM(Fact_Player_Value[TotalPoints]),Whole number,Total points.
+Estimated Win Shares,SUM(Fact_Player_Value[EstimatedWinShares]),Decimal,Estimated win-share-style proxy.
+Production Score,SUM(Fact_Player_Value[ProductionScore]),Decimal,Weighted production.
+Value Score,"DIVIDE([Production Score], [Salary Millions])",Decimal,Production per salary million.
+Cost Per Point,"DIVIDE([Total Salary], [Total Points])",Currency,Salary per point.
+Payroll Per Win,"DIVIDE([Total Salary], SUM(Team_Efficiency[W]))",Currency,Team payroll per win.
+Average 3P Attempt Share,AVERAGE(Player_Shooting_Profile[FGA_3P_Frequency]),Percentage,Average 3P attempt share.
+Playoff Value Score,"DIVIDE(SUM(Player_Playoff_Performance[PlayoffProductionScore]), DIVIDE(SUM(Player_Playoff_Performance[Salary]), 1000000))",Decimal,Playoff production per salary million.
+Top 3 Payroll Share,AVERAGE(Team_Payroll_Allocation[Top3SalaryShare]),Percentage,Top-three payroll concentration.
+Predicted Next Estimated Win Shares,SUM(Player_Predictions[PredictedNextSeasonEstimatedWinShares]),Decimal,Forecast next estimated win shares.
+Predicted Next Value Score,AVERAGE(Player_Predictions[PredictedNextSeasonValueScore]),Decimal,Forecast next value.

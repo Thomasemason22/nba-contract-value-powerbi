@@ -1,90 +1,253 @@
 {
-  "season": "2025-26",
-  "pulled_at": "2026-06-11 14:20:20",
-  "sources": {
-    "totals": "https://www.basketball-reference.com/leagues/NBA_2026_totals.html",
-    "per_game": "https://www.basketball-reference.com/leagues/NBA_2026_per_game.html",
-    "advanced": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
-    "per_poss": "https://www.basketball-reference.com/leagues/NBA_2026_per_poss.html",
-    "shooting": "https://www.basketball-reference.com/leagues/NBA_2026_shooting.html",
-    "team_summary": "https://www.basketball-reference.com/leagues/NBA_2026.html",
-    "team_ratings": "https://www.basketball-reference.com/leagues/NBA_2026_ratings.html",
-    "salaries": "https://www.basketball-reference.com/contracts/players.html"
-  },
-  "salary_rows": 529,
-  "matched_rows": 510,
-  "unmatched_rows": 19,
-  "qualified_players": 370,
-  "player_pace_adjusted_rows": 510,
-  "player_shooting_profile_rows": 510,
-  "team_context_rows": 30,
-  "top_value_players": [
+  "season_range": "2021-22 through 2025-26",
+  "latest_season": "2025-26",
+  "pulled_at": "2026-06-11 15:10:09",
+  "regular_season_player_rows": 2815,
+  "unique_players": 998,
+  "salary_covered_rows": 2312,
+  "salary_coverage_pct": 0.8213143872113676,
+  "playoff_rows": 1097,
+  "team_context_rows": 150,
+  "prediction_rows": 578,
+  "top_value_players_by_season": [
     {
-      "PlayerName": "Kobe Sanders",
-      "SalaryTeam": "LAC",
-      "ValueScore": 1972.8831096726162,
-      "ValueGap": 9.0
+      "Season": "2025-26",
+      "PlayerName": "Ryan Nembhard",
+      "StatsTeam": "DAL",
+      "SalaryMillions": 0.321875,
+      "EstimatedWinShares": 3.398,
+      "ValueScore": 3167.0679611650485,
+      "PlayerValueTier": "Efficient Role Player"
     },
     {
-      "PlayerName": "Jordan Miller",
-      "SalaryTeam": "LAC",
-      "ValueScore": 1579.2051212608947,
-      "ValueGap": 48.0
-    },
-    {
-      "PlayerName": "Maxime Raynaud",
-      "SalaryTeam": "SAC",
-      "ValueScore": 1473.9918452002169,
-      "ValueGap": 175.0
-    },
-    {
-      "PlayerName": "Spencer Jones",
-      "SalaryTeam": "DEN",
-      "ValueScore": 1428.4409271644172,
-      "ValueGap": -2.0
-    },
-    {
-      "PlayerName": "Sidy Cissoko",
-      "SalaryTeam": "POR",
-      "ValueScore": 1323.4379075633558,
-      "ValueGap": 3.0
-    },
-    {
-      "PlayerName": "Pat Spencer",
-      "SalaryTeam": "GSW",
-      "ValueScore": 1267.8887018479745,
-      "ValueGap": 34.0
-    },
-    {
-      "PlayerName": "Nae'Qwan Tomlin",
-      "SalaryTeam": "CLE",
-      "ValueScore": 1215.2057369630302,
-      "ValueGap": -8.0
-    },
-    {
-      "PlayerName": "Toumani Camara",
-      "SalaryTeam": "POR",
-      "ValueScore": 967.6024012491464,
-      "ValueGap": 190.0
-    },
-    {
-      "PlayerName": "Collin Gillespie",
-      "SalaryTeam": "PHO",
-      "ValueScore": 949.7559960178969,
-      "ValueGap": 192.0
-    },
-    {
+      "Season": "2025-26",
       "PlayerName": "Olivier-Maxence Prosper",
-      "SalaryTeam": "DAL",
-      "ValueScore": 940.6799952113014,
-      "ValueGap": 3.0
+      "StatsTeam": "MEM",
+      "SalaryMillions": 0.527879,
+      "EstimatedWinShares": 3.1446666666666667,
+      "ValueScore": 1787.1519799044856,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2025-26",
+      "PlayerName": "Jordan Miller",
+      "StatsTeam": "LAC",
+      "SalaryMillions": 0.712637,
+      "EstimatedWinShares": 3.79,
+      "ValueScore": 1595.4826931523344,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2025-26",
+      "PlayerName": "Maxime Raynaud",
+      "StatsTeam": "SAC",
+      "SalaryMillions": 1.27287,
+      "EstimatedWinShares": 6.240666666666667,
+      "ValueScore": 1470.8493404668193,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2025-26",
+      "PlayerName": "Spencer Jones",
+      "StatsTeam": "DEN",
+      "SalaryMillions": 0.623967,
+      "EstimatedWinShares": 2.9994666666666667,
+      "ValueScore": 1442.1275484120154,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2024-25",
+      "PlayerName": "Justin Edwards",
+      "StatsTeam": "PHI",
+      "SalaryMillions": 0.425619,
+      "EstimatedWinShares": 2.8864,
+      "ValueScore": 2034.4956404671784,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2024-25",
+      "PlayerName": "Jordan Goodwin",
+      "StatsTeam": "LAL",
+      "SalaryMillions": 0.223718,
+      "EstimatedWinShares": 1.5157333333333332,
+      "ValueScore": 2032.5588464048487,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2024-25",
+      "PlayerName": "Tyrese Martin",
+      "StatsTeam": "BRK",
+      "SalaryMillions": 0.635853,
+      "EstimatedWinShares": 3.4680000000000004,
+      "ValueScore": 1636.227241201976,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2024-25",
+      "PlayerName": "Javonte Green",
+      "StatsTeam": "CLE",
+      "SalaryMillions": 0.599862,
+      "EstimatedWinShares": 3.2050666666666667,
+      "ValueScore": 1602.9020007935158,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2024-25",
+      "PlayerName": "Ryan Rollins",
+      "StatsTeam": "MIL",
+      "SalaryMillions": 0.491887,
+      "EstimatedWinShares": 2.5629333333333335,
+      "ValueScore": 1563.1232376541766,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2023-24",
+      "PlayerName": "Trayce Jackson-Davis",
+      "StatsTeam": "GSW",
+      "SalaryMillions": 1.119563,
+      "EstimatedWinShares": 4.420000000000001,
+      "ValueScore": 1184.3906952980765,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2023-24",
+      "PlayerName": "Keon Ellis",
+      "StatsTeam": "SAC",
+      "SalaryMillions": 0.68343,
+      "EstimatedWinShares": 2.6390999999999996,
+      "ValueScore": 1158.465387823186,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2023-24",
+      "PlayerName": "Toumani Camara",
+      "StatsTeam": "POR",
+      "SalaryMillions": 1.119563,
+      "EstimatedWinShares": 4.242,
+      "ValueScore": 1136.6935134512305,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2023-24",
+      "PlayerName": "Spencer Dinwiddie",
+      "StatsTeam": "BRK",
+      "SalaryMillions": 1.554654,
+      "EstimatedWinShares": 5.722799999999999,
+      "ValueScore": 1104.3228911384783,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2023-24",
+      "PlayerName": "Delon Wright",
+      "StatsTeam": "WAS",
+      "SalaryMillions": 0.661628,
+      "EstimatedWinShares": 2.1949,
+      "ValueScore": 995.2269250999052,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2022-23",
+      "PlayerName": "Russell Westbrook",
+      "StatsTeam": "LAL",
+      "SalaryMillions": 0.495955,
+      "EstimatedWinShares": 8.543433333333333,
+      "ValueScore": 5167.868052545089,
+      "PlayerValueTier": "Bargain Star"
+    },
+    {
+      "Season": "2022-23",
+      "PlayerName": "Patrick Beverley",
+      "StatsTeam": "CHI",
+      "SalaryMillions": 0.357717,
+      "EstimatedWinShares": 4.151766666666667,
+      "ValueScore": 3481.8865192316835,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2022-23",
+      "PlayerName": "Reggie Jackson",
+      "StatsTeam": "DEN",
+      "SalaryMillions": 0.580373,
+      "EstimatedWinShares": 4.197866666666666,
+      "ValueScore": 2169.914865095378,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2022-23",
+      "PlayerName": "Will Barton",
+      "StatsTeam": "TOR",
+      "SalaryMillions": 0.432642,
+      "EstimatedWinShares": 2.5909333333333335,
+      "ValueScore": 1796.589327896968,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2022-23",
+      "PlayerName": "Goran Dragic",
+      "StatsTeam": "MIL",
+      "SalaryMillions": 0.390433,
+      "EstimatedWinShares": 2.2581333333333333,
+      "ValueScore": 1735.099235976467,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2021-22",
+      "PlayerName": "Kessler Edwards",
+      "StatsTeam": "BRK",
+      "SalaryMillions": 0.005318,
+      "EstimatedWinShares": 2.1632,
+      "ValueScore": 122030.83866115082,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2021-22",
+      "PlayerName": "Amir Coffey",
+      "StatsTeam": "LAC",
+      "SalaryMillions": 0.153488,
+      "EstimatedWinShares": 3.882400000000001,
+      "ValueScore": 7588.345668716774,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2021-22",
+      "PlayerName": "Jose Alvarado",
+      "StatsTeam": "NOP",
+      "SalaryMillions": 0.15,
+      "EstimatedWinShares": 2.8944,
+      "ValueScore": 5788.8,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2021-22",
+      "PlayerName": "Armoni Brooks",
+      "StatsTeam": "HOU",
+      "SalaryMillions": 0.136926,
+      "EstimatedWinShares": 1.9494,
+      "ValueScore": 4271.066123307481,
+      "PlayerValueTier": "Efficient Role Player"
+    },
+    {
+      "Season": "2021-22",
+      "PlayerName": "DeMarcus Cousins",
+      "StatsTeam": "DEN",
+      "SalaryMillions": 0.431684,
+      "EstimatedWinShares": 3.1151999999999997,
+      "ValueScore": 2164.9169299765567,
+      "PlayerValueTier": "Efficient Role Player"
     }
   ],
-  "top_team_value": [
+  "latest_top_team_value": [
     {
-      "TeamName": "Dallas Mavericks",
-      "TeamKey": "DAL",
-      "ValueScore": 128.64828798452706
+      "Season": "2025-26",
+      "TeamName": "Washington Wizards",
+      "TeamKey": "WAS",
+      "ValueScore": 150.0030219023771
     }
-  ]
+  ],
+  "sources": {
+    "espn_player_stats": "https://www.espn.com/nba/stats/player/_/season/{year}/seasontype/{season_type}/table/offensive/page/{page}",
+    "espn_salaries": "https://www.espn.com/nba/salaries/_/page/{page}/year/{year}",
+    "espn_standings": "https://www.espn.com/nba/standings/_/season/{year}/group/league",
+    "basketball_reference_contracts_fallback": "https://www.basketball-reference.com/contracts/players.html"
+  }
 }

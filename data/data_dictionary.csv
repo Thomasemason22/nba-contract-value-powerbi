@@ -1,31 +1,18 @@
 TableName,ColumnName,DataType,Description
-Fact_Player_Value,PlayerKey,Text,Unique player row key for this project dataset.
-Fact_Player_Value,Season,Text,NBA season used for salary and performance analysis.
-Fact_Player_Value,PlayerName,Text,Player display name.
-Fact_Player_Value,SalaryTeam,Text,Team abbreviation from the salary/contracts table.
-Fact_Player_Value,StatsTeam,Text,Team abbreviation from the stats table. Multi-team players use the Basketball Reference combined row.
-Fact_Player_Value,Salary,Currency,Listed player salary for the selected season.
-Fact_Player_Value,TotalPoints,Number,Total points scored in the selected season.
-Fact_Player_Value,TotalRebounds,Number,Total rebounds in the selected season.
-Fact_Player_Value,TotalAssists,Number,Total assists in the selected season.
-Fact_Player_Value,WS,Number,Basketball Reference win shares.
-Fact_Player_Value,VORP,Number,Basketball Reference value over replacement player.
-Fact_Player_Value,ProductionScore,Number,Custom box-score production score: PTS + 1.2*REB + 1.5*AST + 3*STL + 3*BLK - TOV.
-Fact_Player_Value,CostPerPoint,Currency,Salary divided by total points. Lower is better.
-Fact_Player_Value,CostPerWinShare,Currency,Salary divided by win shares. Lower is better.
-Fact_Player_Value,ValueScore,Number,ProductionScore divided by salary in millions. Higher is better.
-Fact_Player_Value,ValueGap,Number,Salary rank minus production rank. Positive means production outranks salary.
-Team_Efficiency,Payroll,Currency,Sum of player salaries by salary team.
-Team_Efficiency,CostPerWinShare,Currency,Team payroll divided by player win shares.
-Team_Efficiency,ValueScore,Number,Team production score divided by payroll in millions.
-Team_Context,AdjustedNetRtg,Number,Basketball Reference adjusted net rating by team.
-Team_Context,Pace,Number,Estimated possessions per 48 minutes by team.
-Team_Context,Team3P_Frequency,Number,Share of team field goal attempts from three-point range.
-Player_Pace_Adjusted,PTSPer100,Number,Player points per 100 team possessions.
-Player_Pace_Adjusted,PlayerORtg,Number,Basketball Reference player offensive rating.
-Player_Shooting_Profile,AvgShotDistance,Number,Average field goal attempt distance in feet.
-Player_Shooting_Profile,FGA_3P_Frequency,Number,Share of player field goal attempts from three-point range.
-Player_Shooting_Profile,FGA_0_3_Frequency,Number,Share of player field goal attempts from 0-3 feet.
-Player_Shooting_Profile,Corner3Pct,Number,Player field goal percentage on corner threes.
-Dim_Team,TeamKey,Text,NBA team abbreviation.
-Dim_Position,SortOrder,Number,Suggested sort order for positions in visuals.
+Fact_Player_Value,PlayerSeasonKey,Text,Unique player-season key.
+Fact_Player_Value,Salary,Currency,ESPN listed player salary when matched.
+Fact_Player_Value,EstimatedWinShares,Number,Estimated win-share-style proxy from production score; not official Basketball Reference WS.
+Fact_Player_Value,CostPerEstimatedWinShare,Currency,Salary divided by estimated win shares. Lower is better.
+Fact_Player_Value,ContractTier,Text,Salary-cap based contract bucket.
+Fact_Player_Value,PlayerValueTier,Text,Salary-adjusted value segment.
+Player_Pace_Adjusted,PTSPer36,Number,Points per 36 minutes.
+Player_Shooting_Profile,FGA_3P_Frequency,Number,Share of FGA from three-point range.
+Player_Shooting_Profile,FreeThrowRate,Number,Free throw attempts per field goal attempt.
+Player_Playoff_Performance,PlayoffEstimatedWinShares,Number,Estimated playoff win-share-style proxy from playoff production score.
+Player_Playoff_Performance,PlayoffValueScore,Number,Playoff production per salary million.
+Player_Predictions,PredictedNextSeasonEstimatedWinShares,Number,Baseline linear forecast for next-season estimated win shares.
+Player_Predictions,PredictedNextSeasonValueScore,Number,Baseline next-season value forecast.
+Team_Efficiency,TotalEstimatedWinShares,Number,Team sum of estimated player win-share proxy.
+Team_Efficiency,CostPerEstimatedWinShare,Currency,Team payroll divided by total estimated win shares.
+Team_Payroll_Allocation,Top3SalaryShare,Number,Share of payroll held by top three salaries.
+Team_Context,NetPointDiff,Number,ESPN standings point differential per game.

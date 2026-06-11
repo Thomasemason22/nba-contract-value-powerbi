@@ -1,73 +1,67 @@
 # Report Wireframe
 
-## Page 1: League Overview
+## Page 1: Executive Overview
 
-Purpose: Give the audience the headline story quickly.
+- KPI cards: Total Salary, Estimated Win Shares, Value Score, Salary Coverage %
+- Line chart: Value Score by season
+- Scatter: Salary Millions vs Production Score
+- Bar: Top teams by Value Score
+- Slicers: Season, team, position group, contract tier, value tier
 
-Recommended visuals:
+## Page 2: Multi-Season Value Trends
 
-- Header strip with title, season, and data refresh date
-- KPI cards: Total Salary, Total Win Shares, Value Score, Payroll Per Win
-- Scatter plot: Salary Millions vs Production Score by player, colored by position group
-- Bar chart: Top 10 teams by Value Score
-- Slicers: Conference, Team, Position Group, QualifiedForValueRank
+- Line chart: salary, estimated win shares, and value score by season
+- Small multiples: Value Score by position group
+- Matrix: season by contract tier
+- Highlight: biggest season-over-season player value jumps
 
-## Page 2: Player Value Rankings
+## Page 3: Player Value Rankings
 
-Purpose: Show who produced the most relative to salary.
+- Table: Player, season, team, salary, estimated win shares, Production Score, Value Score, Value Tier
+- Top 15 bar chart by Value Score
+- Bottom 15 high-salary value risks
+- Custom tooltip: salary, stats, shooting profile, contract tier
 
-Recommended visuals:
+## Page 4: Contract Tiers and Payroll Strategy
 
-- Table: Player, Team, Position, Salary Millions, PPG, WS, Player ORtg, Value Score, Value Gap
-- Bar chart: Top 15 players by Value Score
-- Bar chart: Bottom 15 qualified players by Cost Per Win Share
-- Tooltip fields: PER, TS%, USG%, VORP, PTSPer100, PlayerORtg
+- Stacked bar: payroll by contract tier
+- Scatter: Top 3 Payroll Share vs Adjusted Net Rating
+- Matrix: team payroll allocation by position group
+- KPI: average payroll per win
 
-## Page 3: Shot Profile and Play Style
+## Page 5: Shot Profile and Play Style
 
-Purpose: Connect player value to how players score.
+- Scatter: 3P attempt share vs Value Score
+- Bar: free throw rate leaders
+- Bar: 3P attempt share leaders
+- Matrix: player shot profile and value tier
 
-Recommended visuals:
+## Page 6: Playoff Value
 
-- Scatter plot: Avg Shot Distance vs Value Score, sized by Total Points
-- Bar chart: Top players by rim attempt share
-- Bar chart: Top players by three-point attempt share
-- Matrix: Player, Team, Position, AvgShotDistance, FGA_0_3_Frequency, FGA_3P_Frequency, Corner3Pct
-- Tooltip fields: Assisted2P_Pct, Assisted3P_Pct, DunksMade
+- Table: playoff production, playoff estimated win shares, Playoff Value Score
+- Bar: best playoff value players by season
+- Scatter: regular-season value vs playoff value
+- Filter to completed playoff seasons only
 
-## Page 4: Team Payroll Efficiency
+## Page 7: Prediction Lab
 
-Purpose: Compare team spending efficiency.
+- Table: Predicted Next Estimated Win Shares, Predicted Next Value Score, Prediction Tier
+- Scatter: current Value Score vs predicted next Value Score
+- Bar: projected bargain players
+- Include model metric cards: RMSE, MAE, training rows
 
-Recommended visuals:
+## Page 8: Methodology and Data Quality
 
-- Matrix: Team, Payroll, Wins, Adjusted Net Rating, Total Win Shares, Cost Per Win Share, Value Score
-- Bar chart: Teams by Value Score
-- Scatter plot: Payroll Millions vs Adjusted Net Rating
-- Bar chart: Team 3P Frequency by team
-- Filled map is optional, but a conference/division slicer is usually cleaner.
+- Source cards
+- Salary coverage by season
+- Missing salary table
+- Contract tier definition
+- Prediction caveats
 
-## Page 5: Contract Outliers
+## UI Upgrades
 
-Purpose: Tell the “who is underpaid or overpaid?” story.
-
-Recommended visuals:
-
-- Bar chart: Average salary by position group
-- Bar chart: Average value score by position group
-- Table: Biggest positive Value Gap
-- Table: Biggest negative Value Gap
-- Slicer: All-Star flag
-
-## Design Notes
-
-Use the included Power BI theme and keep the report calm, high-contrast, and portfolio-ready:
-
-- Background: near-black navy
-- Surface cards: deep blue-gray
-- Primary accent: electric cyan
-- Secondary accent: amber
-- Positive highlight: green
-- Negative highlight: red
-- Use amber only for callouts, not every chart
-- Keep the player ranking table as the main analytical object
+- Add a left navigation rail using buttons/bookmarks.
+- Use a collapsible slicer panel or top filter strip.
+- Create a dedicated player tooltip page.
+- Keep every page to one main analytical question.
+- Use the included dark theme and amber only for highlights/callouts.

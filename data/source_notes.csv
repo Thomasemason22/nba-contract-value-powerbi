@@ -1,17 +1,8 @@
 Item,Value
-Season,2025-26
-PulledAtLocalTime,2026-06-11 14:20:20
-Stats source,https://www.basketball-reference.com/leagues/NBA_2026_totals.html
-Per-game source,https://www.basketball-reference.com/leagues/NBA_2026_per_game.html
-Advanced source,https://www.basketball-reference.com/leagues/NBA_2026_advanced.html
-Per-100 source,https://www.basketball-reference.com/leagues/NBA_2026_per_poss.html
-Player shooting source,https://www.basketball-reference.com/leagues/NBA_2026_shooting.html
-Team summary source,https://www.basketball-reference.com/leagues/NBA_2026.html
-Team ratings source,https://www.basketball-reference.com/leagues/NBA_2026_ratings.html
-Salary source,https://www.basketball-reference.com/contracts/players.html
-Matched salary rows,510
-Unmatched salary rows,19
-Value rank qualifier,"At least 20 games, 500 minutes, and positive listed salary."
-Player pace-adjusted rows,510
-Player shooting profile rows,510
-Team context rows,30
+PulledAtLocalTime,2026-06-11 15:04:51
+SeasonRange,2021-22 through 2025-26
+Regular-season player rows,2815
+Salary-covered player rows,2312
+Primary source,"ESPN player stats, playoff stats, salaries, and standings."
+Advanced metric note,EstimatedWinShares is a transparent proxy from production score because ESPN does not provide official win shares.
+Basketball Reference note,"Basketball Reference advanced source remains documented, but live multi-season refresh was blocked by HTTP 429 during this build."

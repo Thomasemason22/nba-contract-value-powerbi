@@ -13,15 +13,21 @@ const tableFiles = [
   ["Fact_Player_Value", "fact_player_value.csv"],
   ["Player_Pace_Adjusted", "player_pace_adjusted.csv"],
   ["Player_Shooting_Profile", "player_shooting_profile.csv"],
+  ["Player_Playoff_Performance", "player_playoff_performance.csv"],
+  ["Player_Predictions", "player_predictions.csv"],
+  ["Prediction_Backtest", "prediction_backtest.csv"],
+  ["Prediction_Model_Metrics", "prediction_model_metrics.csv"],
   ["Team_Efficiency", "team_efficiency.csv"],
   ["Team_Context", "team_context.csv"],
+  ["Team_Payroll_Allocation", "team_payroll_allocation.csv"],
   ["Dim_Player", "dim_player.csv"],
   ["Dim_Team", "dim_team.csv"],
   ["Dim_Position", "dim_position.csv"],
+  ["Dim_Season", "dim_season.csv"],
   ["Measure_Catalog", "measure_catalog.csv"],
   ["Data_Dictionary", "data_dictionary.csv"],
   ["Source_Notes", "source_notes.csv"],
-  ["Unmatched_Salaries", "unmatched_salaries.csv"],
+  ["Salary_Unmatched", "salary_unmatched.csv"],
 ];
 
 function parseCsv(text) {
@@ -112,6 +118,9 @@ function applyNumberFormats(sheet, headers, rowCount) {
     "Payroll",
     "CostPerPoint",
     "CostPerWinShare",
+    "CostPerEstimatedWinShare",
+    "CostPerPlayoffPoint",
+    "CostPerPlayoffEstimatedWinShare",
     "PayrollPerWin",
   ]);
   const millionColumns = new Set(["SalaryMillions", "GuaranteedMillions", "PayrollMillions"]);
@@ -127,14 +136,24 @@ function applyNumberFormats(sheet, headers, rowCount) {
     "TS_Pct",
     "USG_Pct",
     "WS",
+    "EstimatedWinShares",
+    "TotalEstimatedWinShares",
     "WS/48",
     "BPM",
     "VORP",
     "ProductionScore",
     "PointsPerMillion",
     "WinSharesPerMillion",
+    "EstimatedWinSharesPerMillion",
     "ValueScore",
     "ValueGap",
+    "PTSPer36",
+    "TRBPer36",
+    "ASTPer36",
+    "STLPer36",
+    "BLKPer36",
+    "TOVPer36",
+    "BoxScoreRateScorePer36",
     "PTSPer100",
     "TRBPer100",
     "ASTPer100",
@@ -161,6 +180,33 @@ function applyNumberFormats(sheet, headers, rowCount) {
     "Dunk_FGA_Pct",
     "Corner3_Frequency",
     "Corner3Pct",
+    "FreeThrowRate",
+    "FG_Pct",
+    "FT_Pct",
+    "eFG_Pct",
+    "PlayoffTS_Pct",
+    "PlayoffProductionScore",
+    "PlayoffEstimatedWinShares",
+    "PlayoffValueScore",
+    "PredictedNextSeasonWS",
+    "PredictedNextSeasonEstimatedWinShares",
+    "PredictedNextSeasonProductionScore",
+    "PredictedNextSeasonValueScore",
+    "NextSeasonWSError",
+    "NextSeasonEstimatedWinShareError",
+    "NextSeasonProductionError",
+    "ActualNextSeasonEstimatedWinShares",
+    "Top1SalaryShare",
+    "Top3SalaryShare",
+    "Top5SalaryShare",
+    "GuardSalaryShare",
+    "WingSalaryShare",
+    "ForwardSalaryShare",
+    "CenterSalaryShare",
+    "SalaryCoveragePct",
+    "PointsPerGame",
+    "OpponentPointsPerGame",
+    "NetPointDiff",
     "WinPct",
     "Pace",
     "AdjustedORtg",
@@ -247,10 +293,12 @@ function addOverview(workbook, tableData, summary) {
   const salaryMillionsIndex = factHeaders.indexOf("SalaryMillions");
   const pointsIndex = factHeaders.indexOf("TotalPoints");
   const qualifiedIndex = factHeaders.indexOf("QualifiedForValueRank");
+  const seasonIndex = factHeaders.indexOf("Season");
+  const latestSeason = summary.latest_season ?? "";
 
   const qualifiedPlayers = factRows
     .slice(1)
-    .filter((row) => row[qualifiedIndex] === "True")
+    .filter((row) => row[qualifiedIndex] === "True" && (!latestSeason || row[seasonIndex] === latestSeason))
     .sort((a, b) => Number(b[valueScoreIndex]) - Number(a[valueScoreIndex]))
     .slice(0, 10);
 
@@ -258,7 +306,12 @@ function addOverview(workbook, tableData, summary) {
   const teamNameIndex = teamHeaders.indexOf("TeamName");
   const teamValueIndex = teamHeaders.indexOf("ValueScore");
   const payrollIndex = teamHeaders.indexOf("PayrollMillions");
-  const topTeams = topRows(teamRows, "ValueScore", 10);
+  const teamSeasonIndex = teamHeaders.indexOf("Season");
+  const topTeams = teamRows
+    .slice(1)
+    .filter((row) => !latestSeason || row[teamSeasonIndex] === latestSeason)
+    .sort((a, b) => Number(b[teamValueIndex]) - Number(a[teamValueIndex]))
+    .slice(0, 10);
 
   sheet.getRange("A1:H1").values = [["NBA Contract Value Analysis"]];
   sheet.mergeCells("A1:H1");
@@ -268,11 +321,11 @@ function addOverview(workbook, tableData, summary) {
   };
 
   sheet.getRange("A3:B8").values = [
-    ["Season", summary.season],
-    ["Salary rows", summary.salary_rows],
-    ["Matched stat rows", summary.matched_rows],
-    ["Qualified value-rank players", summary.qualified_players],
-    ["Pace/shooting player rows", `${summary.player_pace_adjusted_rows ?? ""} / ${summary.player_shooting_profile_rows ?? ""}`],
+    ["Season range", summary.season_range],
+    ["Latest season", summary.latest_season],
+    ["Player-season rows", summary.regular_season_player_rows],
+    ["Unique players", summary.unique_players],
+    ["Salary-covered rows", summary.salary_covered_rows],
     ["Team context rows", summary.team_context_rows ?? ""],
   ];
   sheet.getRange("A3:A8").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
@@ -342,13 +395,16 @@ function addOverview(workbook, tableData, summary) {
   chart.yAxis = { numberFormatCode: "0" };
   chart.setPosition("L3", "T22");
 
-  sheet.getRange("A24:D31").values = [
+  sheet.getRange("A24:D34").values = [
     ["Recommended Power BI pages", "", "", ""],
-    ["1", "League Overview", "", ""],
-    ["2", "Player Value Rankings", "", ""],
-    ["3", "Shot Profile and Play Style", "", ""],
-    ["4", "Team Payroll Efficiency", "", ""],
-    ["5", "Contract Outliers", "", ""],
+    ["1", "Executive Overview", "", ""],
+    ["2", "Multi-Season Value Trends", "", ""],
+    ["3", "Player Value Rankings", "", ""],
+    ["4", "Contract Tiers and Payroll Strategy", "", ""],
+    ["5", "Shot Profile and Play Style", "", ""],
+    ["6", "Playoff Value", "", ""],
+    ["7", "Prediction Lab", "", ""],
+    ["8", "Methodology and Data Quality", "", ""],
     ["Import option", "Use CSVs in /data or import this workbook directly.", "", ""],
     ["Docs", "DAX formulas, relationships, theme, and visual layout are in /docs and /theme.", "", ""],
   ];
@@ -360,11 +416,14 @@ function addOverview(workbook, tableData, summary) {
   sheet.mergeCells("B29:D29");
   sheet.mergeCells("B30:D30");
   sheet.mergeCells("B31:D31");
+  sheet.mergeCells("B32:D32");
+  sheet.mergeCells("B33:D33");
+  sheet.mergeCells("B34:D34");
   sheet.getRange("A24:D24").format = { fill: "#17324D", font: { bold: true, color: "#FFFFFF" } };
-  sheet.getRange("A25:A29").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
-  sheet.getRange("A30:A31").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
-  sheet.getRange("A24:D31").format.borders = { preset: "all", style: "thin", color: "#D9E2EC" };
-  sheet.getRange("B25:D31").format.wrapText = true;
+  sheet.getRange("A25:A32").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
+  sheet.getRange("A33:A34").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
+  sheet.getRange("A24:D34").format.borders = { preset: "all", style: "thin", color: "#D9E2EC" };
+  sheet.getRange("B25:D34").format.wrapText = true;
 
   return sheet;
 }
@@ -399,8 +458,11 @@ async function main() {
 
   for (const [sheetName] of [
     ["Fact_Player_Value"],
+    ["Player_Playoff_Performance"],
+    ["Player_Predictions"],
     ["Player_Shooting_Profile"],
     ["Team_Context"],
+    ["Team_Payroll_Allocation"],
     ["Team_Efficiency"],
     ["Data_Dictionary"],
   ]) {

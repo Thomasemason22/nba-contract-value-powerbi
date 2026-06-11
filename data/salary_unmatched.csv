@@ -1,0 +1,160 @@
+Season,SeasonEndYear,PlayerKeyRaw,SalaryPlayer,SalaryPosition,SalaryTeamName,SalaryTeam,Salary,SalaryRank,SalarySource
+2021-22,2022,john wall,John Wall,PG,Houston Rockets,HOU,44310840.0,3.0,ESPN NBA salaries
+2021-22,2022,kawhi leonard,Kawhi Leonard,F,LA Clippers,LAC,39344900.0,9.0,ESPN NBA salaries
+2021-22,2022,ben simmons,Ben Simmons,PG,LA Clippers,LAC,33003936.0,19.0,ESPN NBA salaries
+2021-22,2022,jamal murray,Jamal Murray,G,Denver Nuggets,DEN,29467800.0,33.0,ESPN NBA salaries
+2021-22,2022,jonathan isaac,Jonathan Isaac,F,Orlando Magic,ORL,17400000.0,69.0,ESPN NBA salaries
+2021-22,2022,t j warren,T.J. Warren,SF,New York Knicks,NYK,12690000.0,101.0,ESPN NBA salaries
+2021-22,2022,zion williamson,Zion Williamson,F,New Orleans Pelicans,NOP,10733400.0,114.0,ESPN NBA salaries
+2021-22,2022,james wiseman,James Wiseman,C,Indiana Pacers,IND,9166800.0,136.0,ESPN NBA salaries
+2021-22,2022,dario saric,Dario Saric,F,Detroit Pistons,DET,8510000.0,147.0,ESPN NBA salaries
+2021-22,2022,aron baynes,Aron Baynes,C,Toronto Raptors,TOR,7350000.0,163.0,ESPN NBA salaries
+2021-22,2022,kendrick nunn,Kendrick Nunn,G,Washington Wizards,WAS,5000000.0,200.0,ESPN NBA salaries
+2021-22,2022,dante exum,Dante Exum,G,Washington Wizards,WAS,5000000.0,203.0,ESPN NBA salaries
+2021-22,2022,michael carter williams,Michael Carter-Williams,G,Orlando Magic,ORL,3300000.0,260.0,ESPN NBA salaries
+2021-22,2022,luka samanic,Luka Samanic,F,Utah Jazz,UTA,2959080.0,273.0,ESPN NBA salaries
+2021-22,2022,marc gasol,Marc Gasol,C,Memphis Grizzlies,MEM,2692991.0,281.0,ESPN NBA salaries
+2021-22,2022,anthony tolliver,Anthony Tolliver,PF,New Orleans Pelicans,NOP,2692991.0,282.0,ESPN NBA salaries
+2021-22,2022,edmond sumner,Edmond Sumner,PG,Charlotte Hornets,CHO,2320000.0,295.0,ESPN NBA salaries
+2021-22,2022,jahlil okafor,Jahlil Okafor,C,Indiana Pacers,IND,2130023.0,307.0,ESPN NBA salaries
+2021-22,2022,jontay porter,Jontay Porter,C,Toronto Raptors,TOR,1950000.0,324.0,ESPN NBA salaries
+2021-22,2022,yogi ferrell,Yogi Ferrell,PG,LA Clippers,LAC,1782621.0,345.0,ESPN NBA salaries
+2021-22,2022,alen smailagic,Alen Smailagic,PF,Golden State Warriors,GSW,1782621.0,347.0,ESPN NBA salaries
+2021-22,2022,khyri thomas,Khyri Thomas,SG,Houston Rockets,HOU,1762796.0,356.0,ESPN NBA salaries
+2021-22,2022,mfiondu kabengele,Mfiondu Kabengele,C,Cleveland Cavaliers,CLE,1701593.0,367.0,ESPN NBA salaries
+2021-22,2022,sam dekker,Sam Dekker,F,Toronto Raptors,TOR,1669178.0,372.0,ESPN NBA salaries
+2021-22,2022,jarrell brantley,Jarrell Brantley,PF,Utah Jazz,UTA,1669178.0,373.0,ESPN NBA salaries
+2021-22,2022,e twaun moore,E'Twaun Moore,G,Orlando Magic,ORL,1669178.0,382.0,ESPN NBA salaries
+2021-22,2022,caleb homesley,Caleb Homesley,SG,Washington Wizards,WAS,1517981.0,424.0,ESPN NBA salaries
+2021-22,2022,elijah bryant,Elijah Bryant,SG,Milwaukee Bucks,MIL,1517981.0,434.0,ESPN NBA salaries
+2021-22,2022,jason preston,Jason Preston,G,LA Clippers,LAC,1062303.0,446.0,ESPN NBA salaries
+2021-22,2022,luca vildoza,Luca Vildoza,G,Milwaukee Bucks,MIL,42789.0,491.0,ESPN NBA salaries
+2021-22,2022,name,NAME,,TEAM,,,,ESPN NBA salaries
+2022-23,2023,lonzo ball,Lonzo Ball,G,Utah Jazz,UTA,19534884.0,65.0,ESPN NBA salaries
+2022-23,2023,eric bledsoe,Eric Bledsoe,SG,Portland Trail Blazers,POR,19375000.0,67.0,ESPN NBA salaries
+2022-23,2023,derrick favors,Derrick Favors,F,Chicago Bulls,CHI,10183800.0,127.0,ESPN NBA salaries
+2022-23,2023,chet holmgren,Chet Holmgren,C,Oklahoma City Thunder,OKC,9891240.0,132.0,ESPN NBA salaries
+2022-23,2023,aron baynes,Aron Baynes,C,Toronto Raptors,TOR,7350000.0,171.0,ESPN NBA salaries
+2022-23,2023,danilo gallinari,Danilo Gallinari,PF,Milwaukee Bucks,MIL,6479000.0,184.0,ESPN NBA salaries
+2022-23,2023,david nwaba,David Nwaba,SF,Oklahoma City Thunder,OKC,5022000.0,215.0,ESPN NBA salaries
+2022-23,2023,dante exum,Dante Exum,G,Washington Wizards,WAS,5000000.0,218.0,ESPN NBA salaries
+2022-23,2023,lou williams,Lou Williams,SG,Atlanta Hawks,ATL,5000000.0,219.0,ESPN NBA salaries
+2022-23,2023,maurice harkless,Maurice Harkless,SF,Houston Rockets,HOU,4564980.0,228.0,ESPN NBA salaries
+2022-23,2023,chandler hutchison,Chandler Hutchison,SF,Phoenix Suns,PHO,4019459.0,246.0,ESPN NBA salaries
+2022-23,2023,gabriel deck,Gabriel Deck,SF,Oklahoma City Thunder,OKC,3676852.0,257.0,ESPN NBA salaries
+2022-23,2023,sekou doumbouya,Sekou Doumbouya,SF,Los Angeles Lakers,LAL,3613680.0,259.0,ESPN NBA salaries
+2022-23,2023,trey burke,Trey Burke,PG,Oklahoma City Thunder,OKC,3243750.0,271.0,ESPN NBA salaries
+2022-23,2023,sterling brown,Sterling Brown,SF,Los Angeles Lakers,LAL,3000000.0,283.0,ESPN NBA salaries
+2022-23,2023,marc gasol,Marc Gasol,C,Memphis Grizzlies,MEM,2692991.0,295.0,ESPN NBA salaries
+2022-23,2023,anthony tolliver,Anthony Tolliver,PF,New Orleans Pelicans,NOP,2692991.0,296.0,ESPN NBA salaries
+2022-23,2023,marquese chriss,Marquese Chriss,SF,Oklahoma City Thunder,OKC,2193920.0,323.0,ESPN NBA salaries
+2022-23,2023,nik stauskas,Nik Stauskas,G,Indiana Pacers,IND,2193920.0,324.0,ESPN NBA salaries
+2022-23,2023,jahlil okafor,Jahlil Okafor,C,Indiana Pacers,IND,2130023.0,332.0,ESPN NBA salaries
+2022-23,2023,abdel nader,Abdel Nader,F,Melbourne Pnx,,2000000.0,341.0,ESPN NBA salaries
+2022-23,2023,jontay porter,Jontay Porter,C,Toronto Raptors,TOR,1950000.0,348.0,ESPN NBA salaries
+2022-23,2023,denzel valentine,Denzel Valentine,G,Boston Celtics,BOS,1939350.0,349.0,ESPN NBA salaries
+2022-23,2023,killian tillie,Killian Tillie,SF,Memphis Grizzlies,MEM,1901625.0,359.0,ESPN NBA salaries
+2022-23,2023,wes iwundu,Wes Iwundu,F,Melbourne Pnx,,1824003.0,403.0,ESPN NBA salaries
+2022-23,2023,juwan morgan,Juwan Morgan,F,LA Clippers,LAC,1815518.0,407.0,ESPN NBA salaries
+2022-23,2023,miye oni,Miye Oni,SF,Memphis Grizzlies,MEM,1782621.0,416.0,ESPN NBA salaries
+2022-23,2023,yogi ferrell,Yogi Ferrell,PG,LA Clippers,LAC,1782621.0,417.0,ESPN NBA salaries
+2022-23,2023,alen smailagic,Alen Smailagic,PF,Golden State Warriors,GSW,1782621.0,418.0,ESPN NBA salaries
+2022-23,2023,khyri thomas,Khyri Thomas,SG,Houston Rockets,HOU,1762796.0,421.0,ESPN NBA salaries
+2022-23,2023,devin cannady,Devin Cannady,G,Orlando Magic,ORL,1752638.0,424.0,ESPN NBA salaries
+2022-23,2023,luca vildoza,Luca Vildoza,G,Milwaukee Bucks,MIL,1752638.0,425.0,ESPN NBA salaries
+2022-23,2023,rayjon tucker,Rayjon Tucker,G,Milwaukee Bucks,MIL,1752638.0,426.0,ESPN NBA salaries
+2022-23,2023,malik fitts,Malik Fitts,F,LA Clippers,LAC,1752638.0,428.0,ESPN NBA salaries
+2022-23,2023,paul watson,Paul Watson,SG,Oklahoma City Thunder,OKC,1701593.0,429.0,ESPN NBA salaries
+2022-23,2023,charlie brown jr,Charlie Brown Jr.,G,Memphis Grizzlies,MEM,1701593.0,430.0,ESPN NBA salaries
+2022-23,2023,kelan martin,Kelan Martin,SG,New Orleans Pelicans,NOP,1701593.0,431.0,ESPN NBA salaries
+2022-23,2023,sam dekker,Sam Dekker,F,Toronto Raptors,TOR,1669178.0,433.0,ESPN NBA salaries
+2022-23,2023,e twaun moore,E'Twaun Moore,G,Orlando Magic,ORL,1669178.0,435.0,ESPN NBA salaries
+2022-23,2023,solomon hill,Solomon Hill,SF,New York Knicks,NYK,1669178.0,436.0,ESPN NBA salaries
+2022-23,2023,trevor ariza,Trevor Ariza,SF,Los Angeles Lakers,LAL,1669178.0,437.0,ESPN NBA salaries
+2022-23,2023,semi ojeleye,Semi Ojeleye,PF,LA Clippers,LAC,1669178.0,438.0,ESPN NBA salaries
+2022-23,2023,kevin pangos,Kevin Pangos,G,Cleveland Cavaliers,CLE,1669178.0,439.0,ESPN NBA salaries
+2022-23,2023,jabari parker,Jabari Parker,PF,Boston Celtics,BOS,1669178.0,440.0,ESPN NBA salaries
+2022-23,2023,enes freedom,Enes Freedom,C,Houston Rockets,HOU,1669178.0,441.0,ESPN NBA salaries
+2022-23,2023,jahmi us ramsey,Jahmi'us Ramsey,PG,Toronto Raptors,TOR,1517981.0,466.0,ESPN NBA salaries
+2022-23,2023,daniel oturu,Daniel Oturu,C,Toronto Raptors,TOR,1517981.0,467.0,ESPN NBA salaries
+2022-23,2023,caleb homesley,Caleb Homesley,SG,Washington Wizards,WAS,1517981.0,468.0,ESPN NBA salaries
+2022-23,2023,elijah bryant,Elijah Bryant,SG,Milwaukee Bucks,MIL,1517981.0,470.0,ESPN NBA salaries
+2022-23,2023,deividas sirvydis,Deividas Sirvydis,F,Indiana Pacers,IND,1517981.0,471.0,ESPN NBA salaries
+2022-23,2023,alfonzo mckinnie,Alfonzo McKinnie,F,Chicago Bulls,CHI,1090007.0,478.0,ESPN NBA salaries
+2022-23,2023,keifer sykes,Keifer Sykes,G,Indiana Pacers,IND,558345.0,501.0,ESPN NBA salaries
+2022-23,2023,deandre bembry,DeAndre' Bembry,SG,Milwaukee Bucks,MIL,518021.0,505.0,ESPN NBA salaries
+2022-23,2023,daquan jeffries,DaQuan Jeffries,G,Sacramento Kings,SAC,300000.0,517.0,ESPN NBA salaries
+2022-23,2023,d j augustin,D.J. Augustin,G,Houston Rockets,HOU,189940.0,519.0,ESPN NBA salaries
+2022-23,2023,willie cauley stein,Willie Cauley-Stein,C,Houston Rockets,HOU,10552.0,527.0,ESPN NBA salaries
+2022-23,2023,tristan thompson,Tristan Thompson,C,Cleveland Cavaliers,CLE,10552.0,528.0,ESPN NBA salaries
+2022-23,2023,name,NAME,,TEAM,,,,ESPN NBA salaries
+2023-24,2024,lonzo ball,Lonzo Ball,G,Utah Jazz,UTA,20465117.0,71.0,ESPN NBA salaries
+2023-24,2024,kevin porter jr,Kevin Porter Jr.,G,Milwaukee Bucks,MIL,15860000.0,100.0,ESPN NBA salaries
+2023-24,2024,steven adams,Steven Adams,C,Houston Rockets,HOU,12600000.0,117.0,ESPN NBA salaries
+2023-24,2024,victor oladipo,Victor Oladipo,SG,Guangzhou Loong-Lions,,9450000.0,164.0,ESPN NBA salaries
+2023-24,2024,khem birch,Khem Birch,C,San Antonio Spurs,SAS,6985000.0,196.0,ESPN NBA salaries
+2023-24,2024,rudy gay,Rudy Gay,SF,Golden State Warriors,GSW,6479000.0,206.0,ESPN NBA salaries
+2023-24,2024,ricky rubio,Ricky Rubio,PG,Cleveland Cavaliers,CLE,6146342.0,214.0,ESPN NBA salaries
+2023-24,2024,willy hernangomez,Willy Hernangomez,C,New Orleans Pelicans,NOP,2559942.0,315.0,ESPN NBA salaries
+2023-24,2024,damion lee,Damion Lee,SG,Phoenix Suns,PHO,2528233.0,317.0,ESPN NBA salaries
+2023-24,2024,josh christopher,Josh Christopher,SG,Miami Heat,MIA,2485200.0,321.0,ESPN NBA salaries
+2023-24,2024,pj dozier,PJ Dozier,G,Minnesota Timberwolves,MIN,2413304.0,328.0,ESPN NBA salaries
+2023-24,2024,vlatko cancar,Vlatko Cancar,SF,Denver Nuggets,DEN,2234359.0,341.0,ESPN NBA salaries
+2023-24,2024,isaiah roby,Isaiah Roby,PF,Ulm Ulm,,2066585.0,353.0,ESPN NBA salaries
+2023-24,2024,montrezl harrell,Montrezl Harrell,C,Philadelphia 76ers,PHI,2019760.0,358.0,ESPN NBA salaries
+2023-24,2024,nerlens noel,Nerlens Noel,C,Sacramento Kings,SAC,2019706.0,364.0,ESPN NBA salaries
+2023-24,2024,danny green,Danny Green,F,Philadelphia 76ers,PHI,2019706.0,372.0,ESPN NBA salaries
+2023-24,2024,ryan arcidiacono,Ryan Arcidiacono,G,New York Knicks,NYK,2019706.0,384.0,ESPN NBA salaries
+2023-24,2024,joe wieskamp,Joe Wieskamp,SF,Dallas Mavericks,DAL,1927896.0,410.0,ESPN NBA salaries
+2023-24,2024,carlik jones,Carlik Jones,G,Chicago Bulls,CHI,1922896.0,412.0,ESPN NBA salaries
+2023-24,2024,isaiah todd,Isaiah Todd,PF,Memphis Grizzlies,MEM,1836096.0,416.0,ESPN NBA salaries
+2023-24,2024,marko simonovic,Marko Simonovic,C,Chicago Bulls,CHI,1836096.0,421.0,ESPN NBA salaries
+2023-24,2024,xavier cooks,Xavier Cooks,G,Washington Wizards,WAS,1719864.0,432.0,ESPN NBA salaries
+2023-24,2024,tyrese martin,Tyrese Martin,G,Philadelphia 76ers,PHI,1719864.0,435.0,ESPN NBA salaries
+2023-24,2024,name,NAME,,TEAM,,,,ESPN NBA salaries
+2024-25,2025,bojan bogdanovic,Bojan Bogdanovic,SF,Brooklyn Nets,BRK,19032850.0,90.0,ESPN NBA salaries
+2024-25,2025,davis bertans,Davis Bertans,SF,Charlotte Hornets,CHO,16000000.0,106.0,ESPN NBA salaries
+2024-25,2025,devonte graham,Devonte' Graham,PG,Portland Trail Blazers,POR,12650000.0,131.0,ESPN NBA salaries
+2024-25,2025,nassir little,Nassir Little,SF,Miami Heat,MIA,6750000.0,211.0,ESPN NBA salaries
+2024-25,2025,sasha vezenkov,Sasha Vezenkov,F,Toronto Raptors,TOR,6658536.0,215.0,ESPN NBA salaries
+2024-25,2025,saddiq bey,Saddiq Bey,G,New Orleans Pelicans,NOP,6440678.0,220.0,ESPN NBA salaries
+2024-25,2025,nikola topic,Nikola Topic,G,Oklahoma City Thunder,OKC,4935960.0,250.0,ESPN NBA salaries
+2024-25,2025,jalen mcdaniels,Jalen McDaniels,F,Washington Wizards,WAS,4741800.0,254.0,ESPN NBA salaries
+2024-25,2025,aj griffin,AJ Griffin,F,Houston Rockets,HOU,3889920.0,278.0,ESPN NBA salaries
+2024-25,2025,cody zeller,Cody Zeller,C,Houston Rockets,HOU,3500000.0,289.0,ESPN NBA salaries
+2024-25,2025,derrick rose,Derrick Rose,PG,Memphis Grizzlies,MEM,3356271.0,291.0,ESPN NBA salaries
+2024-25,2025,daron holmes ii,DaRon Holmes II,F,Denver Nuggets,DEN,3065640.0,304.0,ESPN NBA salaries
+2024-25,2025,christian wood,Christian Wood,F,Los Angeles Lakers,LAL,3036040.0,306.0,ESPN NBA salaries
+2024-25,2025,omer yurtseven,Omer Yurtseven,C,Golden State Warriors,GSW,2660000.0,322.0,ESPN NBA salaries
+2024-25,2025,keita bates diop,Keita Bates-Diop,SF,Minnesota Timberwolves,MIN,2654644.0,323.0,ESPN NBA salaries
+2024-25,2025,darius bazley,Darius Bazley,F,Utah Jazz,UTA,2463946.0,337.0,ESPN NBA salaries
+2024-25,2025,aleksej pokusevski,Aleksej Pokusevski,F,Charlotte Hornets,CHO,2273252.0,344.0,ESPN NBA salaries
+2024-25,2025,mamadi diakite,Mamadi Diakite,F,Phoenix Suns,PHO,2273252.0,345.0,ESPN NBA salaries
+2024-25,2025,charlie brown jr,Charlie Brown Jr.,G,Memphis Grizzlies,MEM,2237692.0,346.0,ESPN NBA salaries
+2024-25,2025,eugene omoruyi,Eugene Omoruyi,F,Toronto Raptors,TOR,2196970.0,352.0,ESPN NBA salaries
+2024-25,2025,duane washington jr,Duane Washington Jr.,PG,Charlotte Hornets,CHO,2162607.0,359.0,ESPN NBA salaries
+2024-25,2025,kendall brown,Kendall Brown,G,Boston Celtics,BOS,2120693.0,368.0,ESPN NBA salaries
+2024-25,2025,javon freeman liberty,Javon Freeman-Liberty,G,Toronto Raptors,TOR,1891857.0,425.0,ESPN NBA salaries
+2024-25,2025,onuralp bitim,Onuralp Bitim,SF,Chicago Bulls,CHI,1891857.0,441.0,ESPN NBA salaries
+2024-25,2025,name,NAME,,TEAM,,,,ESPN NBA salaries
+2025-26,2026,tyrese haliburton,Tyrese Haliburton,G,Indiana Pacers,IND,45550512.0,24.0,ESPN NBA salaries
+2025-26,2026,kyrie irving,Kyrie Irving,G,Dallas Mavericks,DAL,36566002.0,42.0,ESPN NBA salaries
+2025-26,2026,terry rozier,Terry Rozier,G,Miami Heat,MIA,26643031.0,66.0,ESPN NBA salaries
+2025-26,2026,fred vanvleet,Fred VanVleet,G,Houston Rockets,HOU,25000000.0,73.0,ESPN NBA salaries
+2025-26,2026,damian lillard,Damian Lillard,G,Portland Trail Blazers,POR,14104000.0,122.0,ESPN NBA salaries
+2025-26,2026,richaun holmes,Richaun Holmes,F,Washington Wizards,WAS,13280737.0,136.0,ESPN NBA salaries
+2025-26,2026,georges niang,Georges Niang,F,Memphis Grizzlies,MEM,8200000.0,193.0,ESPN NBA salaries
+2025-26,2026,kj martin,KJ Martin,F,Utah Jazz,UTA,8025000.0,196.0,ESPN NBA salaries
+2025-26,2026,noa essengue,Noa Essengue,F,Chicago Bulls,CHI,5429520.0,242.0,ESPN NBA salaries
+2025-26,2026,thomas sorber,Thomas Sorber,C,Oklahoma City Thunder,OKC,4655040.0,264.0,ESPN NBA salaries
+2025-26,2026,shake milton,Shake Milton,SG,Los Angeles Lakers,LAL,3000000.0,309.0,ESPN NBA salaries
+2025-26,2026,terence davis,Terence Davis,G,Sacramento Kings,SAC,2546675.0,333.0,ESPN NBA salaries
+2025-26,2026,jared butler,Jared Butler,G,Phoenix Suns,PHO,2349578.0,343.0,ESPN NBA salaries
+2025-26,2026,keon johnson,Keon Johnson,G,Brooklyn Nets,BRK,2349578.0,345.0,ESPN NBA salaries
+2025-26,2026,jaden springer,Jaden Springer,G,New Orleans Pelicans,NOP,2349578.0,347.0,ESPN NBA salaries
+2025-26,2026,spencer dinwiddie,Spencer Dinwiddie,PG,Charlotte Hornets,CHO,2296274.0,354.0,ESPN NBA salaries
+2025-26,2026,dante exum,Dante Exum,G,Washington Wizards,WAS,2296274.0,357.0,ESPN NBA salaries
+2025-26,2026,maxwell lewis,Maxwell Lewis,F,Brooklyn Nets,BRK,2271677.0,386.0,ESPN NBA salaries
+2025-26,2026,ricky council iv,Ricky Council IV,G,Philadelphia 76ers,PHI,2221677.0,396.0,ESPN NBA salaries
+2025-26,2026,nikola durisic,Nikola Durisic,F,Atlanta Hawks,ATL,1272870.0,448.0,ESPN NBA salaries
+2025-26,2026,name,NAME,,TEAM,,,,ESPN NBA salaries

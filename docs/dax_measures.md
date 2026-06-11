@@ -1,55 +1,55 @@
 # Suggested Power BI DAX Measures
 
-Create these measures on the `Fact_Player_Value` table after importing the CSVs or workbook.
+Create these measures after importing the CSVs.
 
 ```DAX
 Total Salary = SUM(Fact_Player_Value[Salary])
 
 Salary Millions = DIVIDE([Total Salary], 1000000)
 
+Salary Coverage % =
+DIVIDE(
+    CALCULATE(COUNTROWS(Fact_Player_Value), Fact_Player_Value[SalaryAvailable] = TRUE()),
+    COUNTROWS(Fact_Player_Value)
+)
+
 Total Points = SUM(Fact_Player_Value[TotalPoints])
 
-Total Rebounds = SUM(Fact_Player_Value[TotalRebounds])
-
-Total Assists = SUM(Fact_Player_Value[TotalAssists])
-
-Total Win Shares = SUM(Fact_Player_Value[WS])
-
-Total VORP = SUM(Fact_Player_Value[VORP])
+Estimated Win Shares = SUM(Fact_Player_Value[EstimatedWinShares])
 
 Production Score = SUM(Fact_Player_Value[ProductionScore])
 
-Cost Per Point = DIVIDE([Total Salary], [Total Points])
-
-Cost Per Win Share = DIVIDE([Total Salary], [Total Win Shares])
-
-Points Per $1M = DIVIDE([Total Points], [Salary Millions])
-
-Win Shares Per $1M = DIVIDE([Total Win Shares], [Salary Millions])
-
 Value Score = DIVIDE([Production Score], [Salary Millions])
 
-Player Count = DISTINCTCOUNT(Fact_Player_Value[PlayerKey])
+Cost Per Point = DIVIDE([Total Salary], [Total Points])
 
-Average Player ORtg = AVERAGE(Player_Pace_Adjusted[PlayerORtg])
-
-Average Player DRtg = AVERAGE(Player_Pace_Adjusted[PlayerDRtg])
-
-Average Shot Distance = AVERAGE(Player_Shooting_Profile[AvgShotDistance])
-
-Average 3P Attempt Share = AVERAGE(Player_Shooting_Profile[FGA_3P_Frequency])
-
-Average Rim Attempt Share = AVERAGE(Player_Shooting_Profile[FGA_0_3_Frequency])
-
-Team Adjusted Net Rating = AVERAGE(Team_Context[AdjustedNetRtg])
+Cost Per Estimated Win Share = DIVIDE([Total Salary], [Estimated Win Shares])
 
 Payroll Per Win = DIVIDE([Total Salary], SUM(Team_Efficiency[W]))
 
-Qualified Player Count =
-CALCULATE(
-    [Player Count],
-    Fact_Player_Value[QualifiedForValueRank] = TRUE()
+Player Count = DISTINCTCOUNT(Dim_Player[PlayerKey])
+
+Player-Season Count = DISTINCTCOUNT(Fact_Player_Value[PlayerSeasonKey])
+
+Average 3P Attempt Share = AVERAGE(Player_Shooting_Profile[FGA_3P_Frequency])
+
+Average Free Throw Rate = AVERAGE(Player_Shooting_Profile[FreeThrowRate])
+
+Average eFG% = AVERAGE(Player_Shooting_Profile[eFG_Pct])
+
+Playoff Production Score = SUM(Player_Playoff_Performance[PlayoffProductionScore])
+
+Playoff Value Score =
+DIVIDE(
+    [Playoff Production Score],
+    DIVIDE(SUM(Player_Playoff_Performance[Salary]), 1000000)
 )
+
+Top 3 Payroll Share = AVERAGE(Team_Payroll_Allocation[Top3SalaryShare])
+
+Predicted Next Estimated Win Shares = SUM(Player_Predictions[PredictedNextSeasonEstimatedWinShares])
+
+Predicted Next Value Score = AVERAGE(Player_Predictions[PredictedNextSeasonValueScore])
 
 Value Rank =
 RANKX(
@@ -58,20 +58,4 @@ RANKX(
     ,
     DESC
 )
-
-Salary Rank =
-RANKX(
-    ALLSELECTED(Dim_Player[PlayerName]),
-    [Total Salary],
-    ,
-    DESC
-)
-
-Value Gap = [Salary Rank] - [Value Rank]
 ```
-
-Suggested formatting:
-
-- Salary measures: Currency, whole dollars or one decimal in millions.
-- Ratio measures: Currency for cost metrics; decimal for value metrics.
-- Rank measures: Whole number.

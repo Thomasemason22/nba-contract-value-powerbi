@@ -2,33 +2,39 @@
 
 ## Visual Direction
 
-Target feel: premium sports analytics desk. Dark, sharp, and data-first, with just enough broadcast energy to feel basketball-specific.
+Premium sports analytics desk: dark, sharp, calm, and data-first.
 
 ## Theme
 
-Import `theme/nba-contract-value-theme.json` in Power BI:
+Import `theme/nba-contract-value-theme.json` in Power BI.
 
-1. Open the report.
-2. Go to **View > Browse for themes**.
-3. Select `theme/nba-contract-value-theme.json`.
-
-## Layout System
+## Layout
 
 - Canvas: 16:9.
-- Page background: `#07111F`.
-- Use a 24 px outer margin and 16 px gutters.
-- Header height: 64-76 px.
-- KPI row height: 104-120 px.
-- Use 4 KPI cards max per page.
-- Put slicers in a left rail or a compact top strip, never scattered through the canvas.
+- Background: `#07111F`.
+- Outer margin: 24 px.
+- Gutter: 16 px.
+- Header: 64-76 px.
+- Left navigation rail: 72-96 px if using icons/buttons.
+- KPI cards: 4 max per page.
 
-## Components
+## Navigation
 
-- KPI cards: dark surface, large value, small uppercase label, no heavy border.
-- Tables/matrices: dark header, subtle row grid, high-contrast text.
-- Scatter plots: cyan points, amber highlight for selected outliers.
-- Bar charts: sort descending, show data labels only when they add clarity.
-- Tooltips: include salary, value score, win shares, ORtg/DRtg, and shot-profile fields.
+- Use page navigation buttons for Overview, Trends, Players, Contracts, Shot Profile, Playoffs, Prediction, Methodology.
+- Use a consistent active-page accent in cyan.
+- Keep slicers in one location across pages.
+
+## Tooltip Page
+
+Create a tooltip page named `Player Tooltip` with:
+
+- Player name, season, team
+- Salary and contract tier
+- PPG/RPG/APG
+- Estimated Win Shares, Production Score, eFG%, TS%, 3P attempt share
+- Value Score and Value Tier
+- Free throw rate, 3P attempt share, double-doubles/triple-doubles
+- Prediction tier when available
 
 ## Color Tokens
 
@@ -42,17 +48,10 @@ Import `theme/nba-contract-value-theme.json` in Power BI:
 - Positive: `#22C55E`
 - Negative: `#F43F5E`
 
-## Typography
+## Formatting Rules
 
-- Title: 24-30 pt, bold.
-- Section headers: 13-15 pt, semibold.
-- KPI values: 26-34 pt.
-- Body/table text: 9-11 pt.
-
-## Polish Checklist
-
-- Every page has one clear analytical question.
-- Every chart title explains the metric, not the chart type.
-- Values are formatted: salary in `$M`, percentages as `%`, ranks as whole numbers.
-- Use `QualifiedForValueRank = TRUE` on value ranking visuals.
-- Avoid team-color overload. Use team filters for interaction, not page-wide color chaos.
+- Salary: `$0.0M`
+- Percentages: `0.0%`
+- Value scores: one decimal
+- Ranks: whole numbers
+- Sort ranking visuals descending by value score unless intentionally showing risks
