@@ -104,7 +104,7 @@ function estimateWidth(values, colIndex) {
     ...sample.map((value) => (value === null || value === undefined ? 0 : String(value).length)),
     8
   );
-  return Math.min(Math.max(maxLen + 2, 10), 34);
+  return Math.min(Math.max(maxLen + 2, 11), 38);
 }
 
 function cleanTableName(sheetName) {
@@ -248,11 +248,11 @@ function writeSheet(workbook, sheetName, rows) {
 
   const headerRange = sheet.getRange(`A1:${excelColumn(colCount - 1)}1`);
   headerRange.format = {
-    fill: "#17324D",
+    fill: "#0B1623",
     font: { bold: true, color: "#FFFFFF" },
     wrapText: true,
   };
-  fullRange.format.borders = { preset: "all", style: "thin", color: "#D9E2EC" };
+  fullRange.format.borders = { preset: "all", style: "thin", color: "#D7E0EA" };
   sheet.freezePanes.freezeRows(1);
 
   for (let index = 0; index < colCount; index += 1) {
@@ -262,7 +262,7 @@ function writeSheet(workbook, sheetName, rows) {
 
   if (rowCount > 1 && colCount > 1) {
     const table = sheet.tables.add(rangeAddress(rowCount, colCount), true, cleanTableName(sheetName));
-    table.style = "TableStyleMedium2";
+    table.style = "TableStyleMedium4";
     table.showFilterButton = true;
   }
 
@@ -313,62 +313,126 @@ function addOverview(workbook, tableData, summary) {
     .sort((a, b) => Number(b[teamValueIndex]) - Number(a[teamValueIndex]))
     .slice(0, 10);
 
-  sheet.getRange("A1:H1").values = [["NBA Contract Value Analysis"]];
-  sheet.mergeCells("A1:H1");
-  sheet.getRange("A1:H1").format = {
-    fill: "#0B1623",
-    font: { bold: true, color: "#FFFFFF", size: 18 },
+  const latestFactRows = factRows.slice(1).filter((row) => !latestSeason || row[seasonIndex] === latestSeason);
+  const salaryCoveredRows = latestFactRows.filter((row) => row[factHeaders.indexOf("SalaryAvailable")] === "True").length;
+  const salaryCoverage = latestFactRows.length ? salaryCoveredRows / latestFactRows.length : 0;
+
+  sheet.getRange("A1:J1").values = [["NBA Contract Value Analysis", "", "", "", "", "", "", "", "", ""]];
+  sheet.mergeCells("A1:J2");
+  sheet.getRange("A1:J2").format = {
+    fill: "#07111F",
+    font: { bold: true, color: "#F8FAFC", size: 26 },
   };
 
-  sheet.getRange("A3:B8").values = [
-    ["Season range", summary.season_range],
-    ["Latest season", summary.latest_season],
-    ["Player-season rows", summary.regular_season_player_rows],
-    ["Unique players", summary.unique_players],
-    ["Salary-covered rows", summary.salary_covered_rows],
-    ["Team context rows", summary.team_context_rows ?? ""],
-  ];
-  sheet.getRange("A3:A8").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
-  sheet.getRange("A3:B8").format.borders = { preset: "all", style: "thin", color: "#D9E2EC" };
-  sheet.getRange("A:A").format.columnWidth = 28;
-  sheet.getRange("B:B").format.columnWidth = 22;
+  sheet.getRange("A3:J3").values = [[
+    "Power BI-ready player salary, production, playoff, team context, and prediction model tables",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ]];
+  sheet.mergeCells("A3:J3");
+  sheet.getRange("A3:J3").format = {
+    fill: "#07111F",
+    font: { color: "#A8B3C5", size: 12 },
+  };
 
-  sheet.getRange("A10:F10").values = [["Top Qualified Players by Value Score"]];
-  sheet.mergeCells("A10:F10");
-  sheet.getRange("A10:F10").format = {
+  const kpis = [
+    ["Season Range", String(summary.season_range).replace(" through ", " to "), "Model window"],
+    ["Player-Seasons", summary.regular_season_player_rows, "Fact rows"],
+    ["Unique Players", summary.unique_players, "Dim_Player"],
+    ["Salary Coverage", salaryCoverage, "Latest season"],
+    ["Playoff Rows", summary.playoff_rows, "Postseason"],
+  ];
+  const starts = ["A5", "C5", "E5", "G5", "I5"];
+  kpis.forEach((kpi, index) => {
+    const startCol = index * 2;
+    const left = excelColumn(startCol);
+    const right = excelColumn(startCol + 1);
+    sheet.getRange(`${left}5:${right}7`).values = [
+      [kpi[0], ""],
+      [kpi[1], ""],
+      [kpi[2], ""],
+    ];
+    sheet.mergeCells(`${left}5:${right}5`);
+    sheet.mergeCells(`${left}6:${right}6`);
+    sheet.mergeCells(`${left}7:${right}7`);
+    sheet.getRange(`${left}5:${right}7`).format = {
+      fill: "#102033",
+      font: { color: "#F8FAFC" },
+    };
+    sheet.getRange(`${left}5:${right}5`).format = {
+      fill: "#102033",
+      font: { bold: true, color: "#A8B3C5", size: 10 },
+    };
+    sheet.getRange(`${left}6:${right}6`).format = {
+      fill: "#102033",
+      font: { bold: true, color: index === 3 ? "#22C55E" : "#F8FAFC", size: 17 },
+    };
+    sheet.getRange(`${left}7:${right}7`).format = {
+      fill: "#102033",
+      font: { color: "#A8B3C5", size: 10 },
+    };
+    sheet.getRange(`${left}5:${right}7`).format.borders = {
+      preset: "all",
+      style: "thin",
+      color: "#27415F",
+    };
+  });
+  sheet.getRange("C6:D6").format.numberFormat = "#,##0";
+  sheet.getRange("E6:F6").format.numberFormat = "#,##0";
+  sheet.getRange("G6:H6").format.numberFormat = "0.0%";
+  sheet.getRange("I6:J6").format.numberFormat = "#,##0";
+
+  sheet.getRange("A9:G9").values = [["Top Qualified Players by Value Score", "", "", "", "", "", ""]];
+  sheet.mergeCells("A9:G9");
+  sheet.getRange("A9:G9").format = {
     fill: "#17324D",
     font: { bold: true, color: "#FFFFFF" },
   };
 
   const playerTable = [
-    ["Player", "Team", "Salary $M", "Points", "Value Score", "Qualified"],
+    ["Player", "Team", "Salary $M", "Points", "Est. Win Shares", "Value Score", "Tier"],
     ...qualifiedPlayers.map((row) => [
       row[playerIndex],
       row[salaryTeamIndex],
       Number(row[salaryMillionsIndex]),
       Number(row[pointsIndex]),
+      Number(row[factHeaders.indexOf("EstimatedWinShares")]),
       Number(row[valueScoreIndex]),
-      row[qualifiedIndex],
+      row[factHeaders.indexOf("PlayerValueTier")],
     ]),
   ];
-  sheet.getRange(`A11:F${10 + playerTable.length}`).values = playerTable;
-  sheet.getRange("A11:F11").format = {
+  sheet.getRange(`A10:G${9 + playerTable.length}`).values = playerTable;
+  sheet.getRange("A10:G10").format = {
     fill: "#4B5563",
     font: { bold: true, color: "#FFFFFF" },
   };
-  sheet.getRange(`C12:C${10 + playerTable.length}`).format.numberFormat = "$0.0";
-  sheet.getRange(`D12:E${10 + playerTable.length}`).format.numberFormat = "0.00";
-  sheet.getRange(`A11:F${10 + playerTable.length}`).format.borders = {
+  sheet.getRange(`C11:C${9 + playerTable.length}`).format.numberFormat = "$0.0";
+  sheet.getRange(`D11:F${9 + playerTable.length}`).format.numberFormat = "0.00";
+  sheet.getRange(`A10:G${9 + playerTable.length}`).format.borders = {
     preset: "all",
     style: "thin",
     color: "#D9E2EC",
   };
+  sheet.getRange(`A11:G${9 + playerTable.length}`).format = {
+    fill: "#F8FAFC",
+    font: { color: "#0B1623" },
+  };
+  sheet.getRange("A:A").format.columnWidth = 28;
+  sheet.getRange("B:B").format.columnWidth = 12;
   sheet.getRange("C:C").format.columnWidth = 13;
   sheet.getRange("D:D").format.columnWidth = 12;
   sheet.getRange("E:E").format.columnWidth = 15;
-  sheet.getRange("F:F").format.columnWidth = 12;
+  sheet.getRange("F:F").format.columnWidth = 13;
+  sheet.getRange("G:G").format.columnWidth = 24;
 
-  const chartDataStart = 11;
+  const chartDataStart = 10;
   const chartRows = [
     ["Team", "Value Score", "Payroll $M"],
     ...topTeams.map((row) => [
@@ -377,53 +441,69 @@ function addOverview(workbook, tableData, summary) {
       Number(row[payrollIndex]),
     ]),
   ];
-  sheet.getRange(`H${chartDataStart}:J${chartDataStart + chartRows.length - 1}`).values = chartRows;
-  sheet.getRange(`H${chartDataStart}:J${chartDataStart}`).format = {
+  sheet.getRange(`I${chartDataStart}:K${chartDataStart + chartRows.length - 1}`).values = chartRows;
+  sheet.getRange(`I${chartDataStart}:K${chartDataStart}`).format = {
     fill: "#4B5563",
     font: { bold: true, color: "#FFFFFF" },
   };
-  sheet.getRange(`I${chartDataStart + 1}:J${chartDataStart + chartRows.length - 1}`).format.numberFormat = "0.00";
-  sheet.getRange("H:J").format.columnWidth = 18;
+  sheet.getRange(`J${chartDataStart + 1}:K${chartDataStart + chartRows.length - 1}`).format.numberFormat = "0.00";
+  sheet.getRange(`I${chartDataStart}:K${chartDataStart + chartRows.length - 1}`).format.borders = {
+    preset: "all",
+    style: "thin",
+    color: "#D9E2EC",
+  };
+  sheet.getRange("I:I").format.columnWidth = 22;
+  sheet.getRange("J:K").format.columnWidth = 14;
 
   const chart = sheet.charts.add(
     "bar",
-    sheet.getRange(`H${chartDataStart}:I${chartDataStart + chartRows.length - 1}`)
+    sheet.getRange(`I${chartDataStart}:J${chartDataStart + chartRows.length - 1}`)
   );
   chart.title = "Top Teams by Value Score";
   chart.hasLegend = false;
   chart.xAxis = { axisType: "textAxis" };
   chart.yAxis = { numberFormatCode: "0" };
-  chart.setPosition("L3", "T22");
+  chart.setPosition("M5", "T24");
 
-  sheet.getRange("A24:D34").values = [
-    ["Recommended Power BI pages", "", "", ""],
-    ["1", "Executive Overview", "", ""],
-    ["2", "Multi-Season Value Trends", "", ""],
-    ["3", "Player Value Rankings", "", ""],
-    ["4", "Contract Tiers and Payroll Strategy", "", ""],
-    ["5", "Shot Profile and Play Style", "", ""],
-    ["6", "Playoff Value", "", ""],
-    ["7", "Prediction Lab", "", ""],
-    ["8", "Methodology and Data Quality", "", ""],
-    ["Import option", "Use CSVs in /data or import this workbook directly.", "", ""],
-    ["Docs", "DAX formulas, relationships, theme, and visual layout are in /docs and /theme.", "", ""],
+  sheet.getRange("A23:K23").values = [["Power BI Build Path", "", "", "", "", "", "", "", "", "", ""]];
+  sheet.mergeCells("A23:K23");
+  sheet.getRange("A23:K23").format = {
+    fill: "#17324D",
+    font: { bold: true, color: "#FFFFFF" },
+  };
+  sheet.getRange("A24:K28").values = [
+    ["1", "Import CSVs from /data", "Fact_Player_Value, dimensions, team tables, predictions, and playoff performance", "", "", "", "Recommended pages", "", "", "", ""],
+    ["2", "Create relationships", "Use Dim_Player, Dim_Team, Dim_Position, and Dim_Season as lookup tables", "", "", "", "Overview, Trends, Players, Contracts", "", "", "", ""],
+    ["3", "Add DAX measures", "Use docs/dax_measures.md and data/measure_catalog.csv", "", "", "", "Shot Profile, Playoffs, Prediction Lab", "", "", "", ""],
+    ["4", "Apply theme", "Import theme/nba-contract-value-theme.json", "", "", "", "Methodology and Data Quality", "", "", "", ""],
+    ["5", "Design report", "Use docs/report_wireframe.md and the included mockup", "", "", "", "Keep CSV schemas stable for refresh", "", "", "", ""],
   ];
-  sheet.mergeCells("A24:D24");
-  sheet.mergeCells("B25:D25");
-  sheet.mergeCells("B26:D26");
-  sheet.mergeCells("B27:D27");
-  sheet.mergeCells("B28:D28");
-  sheet.mergeCells("B29:D29");
-  sheet.mergeCells("B30:D30");
-  sheet.mergeCells("B31:D31");
-  sheet.mergeCells("B32:D32");
-  sheet.mergeCells("B33:D33");
-  sheet.mergeCells("B34:D34");
-  sheet.getRange("A24:D24").format = { fill: "#17324D", font: { bold: true, color: "#FFFFFF" } };
-  sheet.getRange("A25:A32").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
-  sheet.getRange("A33:A34").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
-  sheet.getRange("A24:D34").format.borders = { preset: "all", style: "thin", color: "#D9E2EC" };
-  sheet.getRange("B25:D34").format.wrapText = true;
+  for (let row = 24; row <= 28; row += 1) {
+    sheet.mergeCells(`C${row}:F${row}`);
+    sheet.mergeCells(`G${row}:K${row}`);
+  }
+  sheet.getRange("A24:A28").format = { fill: "#FBBF24", font: { bold: true, color: "#171007" } };
+  sheet.getRange("B24:K28").format = { fill: "#F8FAFC", font: { color: "#0B1623" }, wrapText: true };
+  sheet.getRange("B24:B28").format = { fill: "#E9EEF5", font: { bold: true, color: "#17324D" } };
+  sheet.getRange("A23:K28").format.borders = { preset: "all", style: "thin", color: "#D9E2EC" };
+
+  sheet.getRange("A30:K30").values = [[
+    "Source note",
+    "EstimatedWinShares is a transparent production proxy because ESPN does not provide official win shares. CSV outputs remain the Power BI source of truth.",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ]];
+  sheet.mergeCells("B30:K31");
+  sheet.getRange("A30:A31").format = { fill: "#102033", font: { bold: true, color: "#FBBF24" } };
+  sheet.getRange("B30:K31").format = { fill: "#102033", font: { color: "#F8FAFC" }, wrapText: true };
+  sheet.getRange("A30:K31").format.borders = { preset: "all", style: "thin", color: "#27415F" };
 
   return sheet;
 }
