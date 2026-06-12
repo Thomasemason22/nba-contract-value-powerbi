@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NBA Contract Value Power BI Output</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07111f;
+      --panel: #102033;
+      --panel-2: #172a42;
+      --text: #f8fafc;
+      --muted: #a8b3c5;
+      --line: #27415f;
+      --cyan: #38bdf8;
+      --gold: #fbbf24;
+      --green: #22c55e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 28px clamp(18px, 4vw, 48px);
+      background: #081728;
+    }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; }
+    h1 { font-size: clamp(28px, 4vw, 48px); }
+    h2 { font-size: 20px; margin-bottom: 12px; }
+    h3 { font-size: 15px; color: var(--muted); margin-bottom: 8px; }
+    p { color: var(--muted); margin: 8px 0 0; max-width: 920px; }
+    main {
+      padding: 24px clamp(18px, 4vw, 48px) 44px;
+      display: grid;
+      gap: 22px;
+    }
+    section {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .metric {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 90px;
+    }
+    .metric span {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .metric strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 28px;
+      line-height: 1;
+    }
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    a.card:hover { border-color: var(--cyan); }
+    a.card strong { display: block; font-size: 16px; }
+    a.card span { display: block; color: var(--muted); margin-top: 4px; font-size: 13px; }
+    .accent { color: var(--gold); }
+    .ok { color: var(--green); }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 16px;
+    }
+    figure {
+      margin: 0;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      background: var(--panel-2);
+      color: var(--text);
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    code { color: var(--cyan); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NBA Contract Value Power BI Output</h1>
+    <p>Local output viewer for the expanded project. Use this page to open the workbook, package, source CSVs, docs, scripts, theme, and preview images.</p>
+  </header>
+  <main>
+    <section>
+      <h2>Dataset Snapshot</h2>
+      <div class="metrics">
+        <div class="metric"><span>Season Range</span><strong>2021-22 to 2025-26</strong></div>
+        <div class="metric"><span>Player-Seasons</span><strong>2,815</strong></div>
+        <div class="metric"><span>Unique Players</span><strong>998</strong></div>
+        <div class="metric"><span>Salary-Covered Rows</span><strong>2,312</strong></div>
+        <div class="metric"><span>Playoff Rows</span><strong>1,097</strong></div>
+        <div class="metric"><span>Team Context Rows</span><strong>150</strong></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Main Files</h2>
+      <div class="links">
+        <a class="card" href="NBA_Contract_Value_Analysis.xlsx"><strong>Excel Workbook</strong><span>Open the companion workbook with overview and all generated tables.</span></a>
+        <a class="card" href="NBA_Contract_Value_PowerBI_Project.zip"><strong>Project ZIP</strong><span>Download/open the full packaged project.</span></a>
+        <a class="card" href="README.md"><strong>README</strong><span>Project question, source notes, file map, and dataset snapshot.</span></a>
+        <a class="card" href="project_summary.json"><strong>Project Summary JSON</strong><span>Machine-readable summary of the generated output.</span></a>
+        <a class="card" href="assets/report_layout_mockup.svg"><strong>Report Layout Mockup</strong><span>Visual reference for the Power BI report layout.</span></a>
+        <a class="card" href="theme/nba-contract-value-theme.json"><strong>Power BI Theme</strong><span>Import this JSON theme into Power BI.</span></a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Workbook Previews</h2>
+      <div class="preview-grid">
+        <figure><img src="previews/workbook_overview.png" alt="Workbook overview preview"><figcaption>Workbook Overview</figcaption></figure>
+        <figure><img src="previews/fact_player_value_preview.png" alt="Fact player value preview"><figcaption>Fact Player Value</figcaption></figure>
+        <figure><img src="previews/player_predictions_preview.png" alt="Player predictions preview"><figcaption>Player Predictions</figcaption></figure>
+        <figure><img src="previews/player_playoff_performance_preview.png" alt="Player playoff performance preview"><figcaption>Player Playoff Performance</figcaption></figure>
+        <figure><img src="previews/team_efficiency_preview.png" alt="Team efficiency preview"><figcaption>Team Efficiency</figcaption></figure>
+        <figure><img src="previews/team_payroll_allocation_preview.png" alt="Team payroll allocation preview"><figcaption>Team Payroll Allocation</figcaption></figure>
+        <figure><img src="previews/player_shooting_profile_preview.png" alt="Player shooting profile preview"><figcaption>Player Shooting Profile</figcaption></figure>
+        <figure><img src="previews/team_context_preview.png" alt="Team context preview"><figcaption>Team Context</figcaption></figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>CSV Data Tables</h2>
+      <div class="links">
+        <a class="card" href="data/fact_player_value.csv"><strong>fact_player_value.csv</strong><span>Main player-season fact table.</span></a>
+        <a class="card" href="data/player_pace_adjusted.csv"><strong>player_pace_adjusted.csv</strong><span>Per-36 player rate stats.</span></a>
+        <a class="card" href="data/player_shooting_profile.csv"><strong>player_shooting_profile.csv</strong><span>3P share, FT rate, eFG%, TS%, double/triple doubles.</span></a>
+        <a class="card" href="data/player_playoff_performance.csv"><strong>player_playoff_performance.csv</strong><span>Postseason production and playoff value.</span></a>
+        <a class="card" href="data/player_predictions.csv"><strong>player_predictions.csv</strong><span>Latest-season next-season forecast outputs.</span></a>
+        <a class="card" href="data/prediction_backtest.csv"><strong>prediction_backtest.csv</strong><span>Prediction backtest rows and errors.</span></a>
+        <a class="card" href="data/prediction_model_metrics.csv"><strong>prediction_model_metrics.csv</strong><span>RMSE, MAE, and training row counts.</span></a>
+        <a class="card" href="data/team_efficiency.csv"><strong>team_efficiency.csv</strong><span>Team payroll efficiency by season.</span></a>
+        <a class="card" href="data/team_context.csv"><strong>team_context.csv</strong><span>Standings, scoring, and point differential.</span></a>
+        <a class="card" href="data/team_payroll_allocation.csv"><strong>team_payroll_allocation.csv</strong><span>Payroll concentration and position allocation.</span></a>
+        <a class="card" href="data/salary_unmatched.csv"><strong>salary_unmatched.csv</strong><span>Salary rows without matched player-season stats.</span></a>
+        <a class="card" href="data/data_dictionary.csv"><strong>data_dictionary.csv</strong><span>Important table and column definitions.</span></a>
+        <a class="card" href="data/measure_catalog.csv"><strong>measure_catalog.csv</strong><span>Power BI measure catalog.</span></a>
+        <a class="card" href="data/source_notes.csv"><strong>source_notes.csv</strong><span>Source and caveat notes.</span></a>
+        <a class="card" href="data/dim_player.csv"><strong>dim_player.csv</strong><span>Player lookup table.</span></a>
+        <a class="card" href="data/dim_team.csv"><strong>dim_team.csv</strong><span>Team lookup table.</span></a>
+        <a class="card" href="data/dim_position.csv"><strong>dim_position.csv</strong><span>Position lookup table.</span></a>
+        <a class="card" href="data/dim_season.csv"><strong>dim_season.csv</strong><span>Season lookup table.</span></a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Docs And Build Files</h2>
+      <div class="links">
+        <a class="card" href="docs/powerbi_build_guide.md"><strong>Power BI Build Guide</strong><span>Import steps, relationships, data types, and report pages.</span></a>
+        <a class="card" href="docs/dax_measures.md"><strong>DAX Measures</strong><span>Suggested measures for the Power BI report.</span></a>
+        <a class="card" href="docs/report_wireframe.md"><strong>Report Wireframe</strong><span>Eight-page report plan and visual ideas.</span></a>
+        <a class="card" href="docs/ui_style_guide.md"><strong>UI Style Guide</strong><span>Theme, layout, tooltip, and formatting guidance.</span></a>
+        <a class="card" href="scripts/build_nba_powerbi_project.py"><strong>Data Builder Script</strong><span>Rebuilds CSVs, docs, theme, and summary.</span></a>
+        <a class="card" href="scripts/build_workbook.mjs"><strong>Workbook Builder Script</strong><span>Rebuilds the Excel companion workbook.</span></a>
+        <a class="card" href="requirements.txt"><strong>requirements.txt</strong><span>Python dependencies for refreshing the data.</span></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
